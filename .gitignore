@@ -5,3 +5,10 @@ __pycache__
 .venv/
 .env/
 _test_run/
+data.json
+logs.db
+.pytest_cache/
+*.db
+coverage
+dist
+build

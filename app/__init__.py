@@ -1,0 +1,1 @@
+"""Log Search & Analyzer package."""
