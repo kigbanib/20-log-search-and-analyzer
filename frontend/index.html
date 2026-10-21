@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Search &amp; Analyzer</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div>
+          <h1 class="app-title">Log Search &amp; Analyzer</h1>
+          <p class="app-sub">Upload logs · filter by severity · trace a request · spot recurring errors</p>
+        </div>
+        <div id="healthBadge" class="health-badge health-unknown">
+          <span class="dot"></span><span id="healthText">checking…</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- LEFT COLUMN -->
+      <section class="col-side">
+        <!-- Upload -->
+        <div class="card">
+          <h2>Upload logs</h2>
+          <p class="hint">JSONL format — one log object per line (see <code>docs/api-contract.md</code>).</p>
+          <form id="uploadForm">
+            <label class="file-drop" for="fileInput">
+              <input type="file" id="fileInput" accept=".log,.jsonl,.txt" hidden />
+              <span id="fileName" class="file-name">Choose a .log / .jsonl file…</span>
+            </label>
+            <button type="submit" id="uploadBtn" class="btn btn-primary" disabled>Upload</button>
+          </form>
+          <div id="uploadResult" class="upload-result hidden"></div>
+        </div>
+
+        <!-- Recurring errors -->
+        <div class="card">
+          <h2>Top recurring errors</h2>
+          <p class="hint">Click a card to filter by severity · click a request ID chip to trace that request.</p>
+          <div id="statsLoading" class="state-box">Loading error stats…</div>
+          <div id="statsEmpty" class="state-box hidden">No errors recorded — nothing is on fire.</div>
+          <div id="statsError" class="state-box state-error hidden">
+            Could not load stats. <button class="btn-link" id="statsRetry">Retry</button>
+          </div>
+          <ul id="statsList" class="stats-list hidden"></ul>
+        </div>
+      </section>
+
+      <!-- MAIN COLUMN -->
+      <section class="col-main">
+        <!-- Filters -->
+        <div class="card">
+          <h2>Log entries</h2>
+          <div class="filters">
+            <label>
+              Severity
+              <select id="severity">
+                <option value="">All</option>
+                <option>DEBUG</option>
+                <option>INFO</option>
+                <option>WARN</option>
+                <option>ERROR</option>
+                <option>CRITICAL</option>
+              </select>
+            </label>
+            <label class="grow">
+              Request ID
+              <input type="search" id="requestId" placeholder="e.g. req-8f3k2" />
+            </label>
+            <label>
+              From
+              <input type="datetime-local" id="dateFrom" />
+            </label>
+            <label>
+              To
+              <input type="datetime-local" id="dateTo" />
+            </label>
+            <div class="filter-actions">
+              <button id="applyBtn" class="btn btn-primary">Apply</button>
+              <button id="resetBtn" class="btn btn-ghost">Reset</button>
+            </div>
+          </div>
+
+          <!-- Table + states -->
+          <div class="table-wrap">
+            <table class="log-table">
+              <thead>
+                <tr>
+                  <th class="col-ts">Timestamp</th>
+                  <th>Severity</th>
+                  <th>Service</th>
+                  <th>Request ID</th>
+                  <th class="col-msg">Message</th>
+                </tr>
+              </thead>
+              <tbody id="logBody"></tbody>
+            </table>
+
+            <div id="logLoading" class="state-box">
+              <div class="spinner"></div>
+              Loading log entries…
+            </div>
+            <div id="logEmpty" class="state-box hidden">
+              <strong>No log entries match these filters.</strong><br />
+              Try widening the date range or clearing the request ID.
+            </div>
+            <div id="logError" class="state-box state-error hidden">
+              <span id="logErrorMsg">Could not load log entries.</span>
+              <button class="btn-link" id="logRetry">Retry</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <span id="pageInfo" class="page-info"></span>
+            <div>
+              <button id="prevBtn" class="btn btn-ghost" disabled>← Prev</button>
+              <button id="nextBtn" class="btn btn-ghost" disabled>Next →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/mock.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
