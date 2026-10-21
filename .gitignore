@@ -5,3 +5,7 @@ __pycache__
 .venv/
 .env/
 _test_run/
+
+# Local database and test cache
+logs.db
+.pytest_cache/
