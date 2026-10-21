@@ -3,8 +3,10 @@
 > **One-liner:** Upload a JSONL log file → it gets parsed and stored → filter by severity → search by request ID → see which errors recur most often. One flow, done well and tested — the entire MVP.
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-48_passed-brightgreen)
+[![Deploy to Render](https://binaries.render.com/docs/render-button.svg)](https://render.com/deploy?repo=kigbanib/20-log-search-and-analyzer)
 
 **Live demo (local):** `http://localhost:8000` → dashboard at `/` + Swagger at `/docs` + explorer at `/explorer`  
+**Live demo (Render):** _pending — paste the `https://<service>.onrender.com` URL here after the first deploy ([how to deploy →](docs/render-deploy.md))_  
 **Repo:** `kigbanib/20-log-search-and-analyzer` — integrated on `arena/d8852790…` (ready to PR to `develop`)
 
 ---
@@ -56,7 +58,9 @@ app/
     logs.py          → Role 2 Search (ecstasy1) — GET /api/logs
     analytics.py     → Role 3 Analytics (kigbanib) — /api/stats/* + /api/health
   models.py, database.py, config.py, schemas.py, crud.py → Role 2
-scripts/generate_logs.py + testdata/* + seed_demo_data.py → Role 5 QA/DevOps
+scripts/generate_logs.py + testdata/* → Role 5 QA/DevOps
+app/seed.py (+ root seed_demo_data.py CLI alias) → Role 5 — idempotent demo seed, runs at startup on Render
+render.yaml + .python-version + .env.example → Role 5 — Render Blueprint (one free web service)
 ```
 
 ---
@@ -81,13 +85,15 @@ cp .env.example .env   # edit if needed
 # MAX_UPLOAD_MB=5
 # CORS_ORIGIN=*
 # PORT=8000
+# SEED_ON_START=true   # seed demo rows at startup when the DB is empty (auto-on under Render)
 ```
 
 ### 3. Generate data & seed
 ```bash
 python scripts/generate_logs.py            # -> testdata/sample_valid.jsonl (500 lines)
 python scripts/generate_logs.py --all      # -> testdata/empty.log, malformed_30pct.*, unknown_severities.log, fake_image.log, sample_5.log
-python seed_demo_data.py                   # seeds logs.db with 16 demo entries
+python seed_demo_data.py                   # seeds logs.db with 17 demo entries (alias of `python -m app.seed`)
+python -m app.seed --force                 # add another demo batch even if rows exist
 ```
 
 ### 4. Run
@@ -193,7 +199,7 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 ---
 
 ## ⚠️ Known Limitations & Next Improvements
-- SQLite + free Render tier → no horizontal scaling, sleeps (cold start ~30s) → **Next:** Postgres on Neon/Supabase + paid tier
+- SQLite + free Render tier → no horizontal scaling, ~1 min cold start after 15 min idle, and an **ephemeral filesystem** (SQLite file + uploads are wiped on every redeploy/restart/spin-down; `SEED_ON_START` re-seeds so the demo never opens empty) → **Next:** Postgres on Render Free/Neon + paid tier for a persistent disk
 - No auth/auditing — **Next:** API key + upload audit log
 - No real-time tail — **Next:** polling/WebSocket for live logs
 - Frontend no build step — **Next:** Vite + proper bundling
@@ -203,8 +209,30 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 
 ## 📦 Deployment
 
-**Render (free):** `DATABASE_URL` (sqlite file or `postgres://`), `PORT` auto. Seed on start via `lifespan init_db` + optional `python seed_demo_data.py`.  
-**Vercel alt:** `frontend/` as static, proxy `/api` to Render.
+**Full walkthrough: [`docs/render-deploy.md`](docs/render-deploy.md)** — decision table, every dashboard click, verification checklist, and a troubleshooting list of the real failure modes. Summary:
+
+| Setting | Value |
+|---|---|
+| Service type | **Web Service** (Python runtime) — API + dashboard in ONE deploy |
+| Build command | `pip install -r requirements.txt` |
+| Start command | `uvicorn app.main:app --host 0.0.0.0 --port $PORT` |
+| Health check path | `/api/health` |
+| Python version | `3.11` (pinned in `.python-version`; Render's default is now 3.14) |
+| Plan | Free (spins down after 15 min idle, ~1 min cold start) |
+| Config | `render.yaml` Blueprint — **New + → Blueprint** pre-fills everything |
+
+**Data on Render:** the filesystem is *ephemeral*, so a SQLite `logs.db` is wiped on
+every redeploy/restart/spin-down. `init_db()` + `SEED_ON_START=true` re-create the
+schema and re-seed the 17 demo entries at startup, so the dashboard is never empty —
+but for uploaded files to survive, point `DATABASE_URL` at a Postgres instance (Render
+Free, expires in 30 days, or Neon/Supabase free). The app rewrites `postgres://` →
+`postgresql://` and `psycopg2-binary` is already in `requirements.txt`, so the switch is
+one env var and a restart. No one-off jobs / SSH on the free tier, which is why seeding
+happens in the app lifespan instead of a deploy hook.
+
+**Vercel alt:** `frontend/` as a static site + `/api` proxied to Render — costs you a
+second deploy and real CORS config (`CORS_ORIGIN=https://your-app.vercel.app`). Not
+recommended for the demo.
 
 ---
 
@@ -213,7 +241,7 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 - **Libraries:** FastAPI, SQLAlchemy, Pydantic, Uvicorn, pytest, httpx, python-multipart (see `requirements.txt`)
 - **Borrowed:** `static/index.html` explorer from Role 2 draft, adapted
 - **AI/code-gen:** used for boilerplate docs/tests, all logic reviewed
-- **Env vars:** `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGIN`, `PORT`
+- **Env vars:** `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGIN`, `PORT`, `SEED_ON_START`
 
 ---
 
