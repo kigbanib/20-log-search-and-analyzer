@@ -6,7 +6,7 @@ Enforces the agreed API contract across all 5 roles.
 from datetime import datetime
 from enum import Enum
 from typing import Optional, List
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_serializer
 
 
 class SeverityEnum(str, Enum):
@@ -31,6 +31,16 @@ class LogEntryResponse(BaseModel):
     message: str = Field(..., description="The log message payload")
 
     model_config = ConfigDict(from_attributes=True)
+
+    @field_serializer("timestamp")
+    def serialize_timestamp(self, value: datetime) -> str:
+        """Always emit ISO-8601 with an explicit UTC marker ('Z').
+
+        SQLite stores naive datetimes (tz dropped on write). Without the 'Z',
+        browsers interpret the timestamp as *local* time and the table shows
+        wrong hours — so we declare it UTC here.
+        """
+        return value.isoformat() if value.tzinfo else value.isoformat() + "Z"
 
 
 class PaginatedLogsResponse(BaseModel):

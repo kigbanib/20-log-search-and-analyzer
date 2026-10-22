@@ -29,3 +29,9 @@ MAX_UPLOAD_BYTES: int = MAX_UPLOAD_MB * 1024 * 1024
 # CORS / Deployment
 CORS_ORIGIN: str = os.getenv("CORS_ORIGIN", "*")
 PORT: int = int(os.getenv("PORT", "8000"))
+
+# Demo seeding on startup (used on Render free tier where the disk is
+# ephemeral): when true and the DB is empty, seed from SEED_FILE if present,
+# otherwise fall back to seed_demo_data.py. Never touches a non-empty DB.
+SEED_ON_START: bool = os.getenv("SEED_ON_START", "").lower() in {"1", "true", "yes"}
+SEED_FILE: str = os.getenv("SEED_FILE", "testdata/sample_valid.jsonl")

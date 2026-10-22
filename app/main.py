@@ -21,13 +21,55 @@ from fastapi.staticfiles import StaticFiles
 
 from app.config import CORS_ORIGIN
 from app.database import init_db
-from app.routers import analytics, logs, upload
+from app.routers import analytics, demo, logs, upload
+
+
+def _maybe_seed() -> None:
+    """Seed demo data when SEED_ON_START=1 and the DB is empty.
+
+    Guarantees the live demo (Render free tier has an ephemeral disk, so the
+    SQLite file starts empty on every deploy/restart) always opens on the
+    rehearsed dataset. Seeding failure never blocks startup.
+    """
+    from sqlalchemy import func
+
+    from app.config import SEED_FILE, SEED_ON_START
+    from app.database import SessionLocal
+    from app.models import LogEntry
+
+    if not SEED_ON_START:
+        return
+    db = SessionLocal()
+    try:
+        if db.query(func.count(LogEntry.id)).scalar():
+            return  # data present — leave it alone
+    finally:
+        db.close()
+    try:
+        if os.path.exists(SEED_FILE):
+            from app.services.ingestion import process_upload
+
+            db = SessionLocal()
+            try:
+                with open(SEED_FILE, "rb") as f:
+                    report = process_upload(f.read(), os.path.basename(SEED_FILE), db)
+            finally:
+                db.close()
+            print(f"[sift] seeded {report['parsed_lines']} entries from {SEED_FILE}")
+        else:
+            import seed_demo_data
+
+            seed_demo_data.seed()
+            print("[sift] seeded via seed_demo_data.py")
+    except Exception as exc:  # noqa: BLE001 — startup must never crash on seeding
+        print(f"[sift] seed skipped: {exc}")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Ensure DB tables exist on startup (and seed if empty — optional)."""
+    """Ensure DB tables exist on startup; optionally seed demo data."""
     init_db()
+    _maybe_seed()
     yield
 
 
@@ -55,6 +97,7 @@ app.add_middleware(
 app.include_router(upload.router)      # POST /api/logs/upload
 app.include_router(logs.router)        # GET /api/logs
 app.include_router(analytics.router)   # GET /api/stats/* + GET /api/health
+app.include_router(demo.router)        # POST /api/demo/scenario/* + /api/demo/reset
 
 
 # ---- Static assets (legacy `static/` from Role 2 + modern `frontend/` from Role 4) ----

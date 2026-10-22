@@ -1,128 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Log Search &amp; Analyzer</title>
+    <title>Sift — Log Search &amp; Analyzer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1117'/%3E%3Cpath d='M5 16h5l3-8 4 16 3-8h7' stroke='%2334d399' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header class="topbar">
       <div class="topbar-inner">
-        <div>
-          <h1 class="app-title">Log Search &amp; Analyzer</h1>
-          <p class="app-sub">Upload logs · filter by severity · trace a request · spot recurring errors</p>
-        </div>
-        <div id="healthBadge" class="health-badge health-unknown">
-          <span class="dot"></span><span id="healthText">checking…</span>
+        <a class="brand" href="/" aria-label="Sift home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="7" class="brand-tile" />
+            <path d="M5 16h5l3-8 4 16 3-8h7" class="brand-pulse" />
+          </svg>
+          <span class="brand-text">
+            <strong>Sift</strong>
+            <small>Log Search &amp; Analyzer</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <a class="chip-link" href="/docs" target="_blank" rel="noopener">API&nbsp;docs</a>
+          <div id="healthBadge" class="health-badge health-unknown" title="API status">
+            <span class="dot"></span><span id="healthText">checking…</span>
+          </div>
+          <button id="themeToggle" class="icon-btn" type="button" title="Toggle light / dark theme" aria-label="Toggle theme">
+            <svg class="ic-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+            <svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          </button>
         </div>
       </div>
     </header>
 
     <main class="layout">
-      <!-- LEFT COLUMN -->
-      <section class="col-side">
-        <!-- Upload -->
-        <div class="card">
-          <h2>Upload logs</h2>
-          <p class="hint">JSONL format — one log object per line (see <code>docs/api-contract.md</code>).</p>
-          <form id="uploadForm">
-            <label class="file-drop" for="fileInput">
-              <input type="file" id="fileInput" accept=".log,.jsonl,.txt" hidden />
-              <span id="fileName" class="file-name">Choose a .log / .jsonl file…</span>
-            </label>
-            <button type="submit" id="uploadBtn" class="btn btn-primary" disabled>Upload</button>
-          </form>
-          <div id="uploadResult" class="upload-result hidden"></div>
-        </div>
+      <!-- Active error streak alert -->
+      <div id="streakStrip" class="streak-strip hidden" role="alert">
+        <span class="streak-ic" aria-hidden="true">⚠</span>
+        <span class="streak-title">Active error streaks</span>
+        <span id="streakChips" class="streak-chips"></span>
+      </div>
 
-        <!-- Recurring errors -->
-        <div class="card">
-          <h2>Top recurring errors</h2>
-          <p class="hint">Click a card to filter by severity · click a request ID chip to trace that request.</p>
-          <div id="statsLoading" class="state-box">Loading error stats…</div>
-          <div id="statsEmpty" class="state-box hidden">No errors recorded — nothing is on fire.</div>
-          <div id="statsError" class="state-box state-error hidden">
-            Could not load stats. <button class="btn-link" id="statsRetry">Retry</button>
+      <!-- Timeline chart -->
+      <section class="card chart-card" aria-label="Log volume over time">
+        <div class="card-head">
+          <div>
+            <h2>Activity</h2>
+            <p class="hint">Entries per severity over time — incident spikes become visible.</p>
           </div>
-          <ul id="statsList" class="stats-list hidden"></ul>
+          <div class="card-head-actions">
+            <button id="demoIncidentBtn" class="btn btn-fire btn-sm" type="button" title="Inject a scripted multi-service incident">⚡ Simulate incident</button>
+            <button id="demoResetBtn" class="btn btn-ghost btn-sm" type="button" title="Wipe and reseed the baseline demo data">↺ Reset</button>
+            <div class="seg" role="group" aria-label="Bucket size">
+              <button id="bucketHour" class="seg-btn active" type="button">Hour</button>
+              <button id="bucketDay" class="seg-btn" type="button">Day</button>
+            </div>
+          </div>
         </div>
+        <div id="chartLoading" class="chart-skeleton" aria-hidden="true"></div>
+        <div id="chart" class="chart hidden" role="img" aria-label="Stacked bar chart of log volume"></div>
+        <div id="chartEmpty" class="state-box hidden">No data yet — upload a log file to see activity.</div>
+        <div id="chartLegend" class="legend hidden"></div>
       </section>
 
-      <!-- MAIN COLUMN -->
-      <section class="col-main">
-        <!-- Filters -->
-        <div class="card">
-          <h2>Log entries</h2>
-          <div class="filters">
-            <label>
-              Severity
-              <select id="severity">
-                <option value="">All</option>
+      <div class="grid">
+        <!-- LEFT -->
+        <section class="col-side">
+          <!-- Upload -->
+          <div class="card">
+            <h2>Upload logs</h2>
+            <p class="hint">JSONL — one log object per line · max 5 MB</p>
+            <form id="uploadForm">
+              <label class="drop-zone" id="dropZone" for="fileInput">
+                <input type="file" id="fileInput" accept=".log,.jsonl,.txt" hidden />
+                <svg class="dz-icon" viewBox="0 0 24 24"><path d="M12 16V4m0 0 4 4m-4-4L8 8M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+                <span id="fileName" class="dz-text">Drop a .log / .jsonl here or <span class="dz-browse">browse</span></span>
+              </label>
+              <button type="submit" id="uploadBtn" class="btn btn-primary" disabled>Upload</button>
+            </form>
+            <div id="uploadResult" class="upload-result hidden"></div>
+          </div>
+
+          <!-- Recurring errors -->
+          <div class="card">
+            <h2>Top recurring errors</h2>
+            <p class="hint">Click a row to filter by severity · click a request ID to trace it.</p>
+            <div id="statsLoading" class="skel-stack">
+              <div class="skel-line"></div><div class="skel-line"></div><div class="skel-line w70"></div><div class="skel-line w50"></div>
+            </div>
+            <div id="statsEmpty" class="state-box hidden">
+              <svg class="state-icon ok-ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              No errors recorded — nothing is on fire.
+            </div>
+            <div id="statsError" class="state-box state-error hidden">
+              Could not load stats. <button class="btn-link" id="statsRetry">Retry</button>
+            </div>
+            <ul id="statsList" class="stats-list hidden"></ul>
+          </div>
+        </section>
+
+        <!-- MAIN -->
+        <section class="col-main">
+          <div class="card table-card">
+            <h2>Log entries</h2>
+            <div class="querybar">
+              <select id="severity" aria-label="Severity">
+                <option value="">All severities</option>
                 <option>DEBUG</option>
                 <option>INFO</option>
                 <option>WARN</option>
                 <option>ERROR</option>
                 <option>CRITICAL</option>
               </select>
-            </label>
-            <label class="grow">
-              Request ID
-              <input type="search" id="requestId" placeholder="e.g. req-8f3k2" />
-            </label>
-            <label>
-              From
-              <input type="datetime-local" id="dateFrom" />
-            </label>
-            <label>
-              To
-              <input type="datetime-local" id="dateTo" />
-            </label>
-            <div class="filter-actions">
+              <div class="req-wrap">
+                <svg class="req-ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="search" id="requestId" class="mono" placeholder="request_id — e.g. req-8f3k2" aria-label="Request ID" />
+                <kbd class="kbd">⌘K</kbd>
+              </div>
+              <input type="datetime-local" id="dateFrom" aria-label="From" />
+              <input type="datetime-local" id="dateTo" aria-label="To" />
               <button id="applyBtn" class="btn btn-primary">Apply</button>
               <button id="resetBtn" class="btn btn-ghost">Reset</button>
             </div>
-          </div>
 
-          <!-- Table + states -->
-          <div class="table-wrap">
-            <table class="log-table">
-              <thead>
-                <tr>
-                  <th class="col-ts">Timestamp</th>
-                  <th>Severity</th>
-                  <th>Service</th>
-                  <th>Request ID</th>
-                  <th class="col-msg">Message</th>
-                </tr>
-              </thead>
-              <tbody id="logBody"></tbody>
-            </table>
+            <div class="chips-row" aria-label="Example queries">
+              <span class="chips-label">Try:</span>
+              <button class="chip-try" data-request-id="req-8f3k2">req-8f3k2</button>
+              <button class="chip-try" data-severity="CRITICAL">only CRITICAL</button>
+              <button class="chip-try" data-severity="ERROR">only ERROR</button>
+              <button class="chip-try" data-last24="1">last 24h</button>
+            </div>
 
-            <div id="logLoading" class="state-box">
-              <div class="spinner"></div>
-              Loading log entries…
+            <div class="table-wrap">
+              <table class="log-table">
+                <thead>
+                  <tr>
+                    <th class="col-n">#</th>
+                    <th class="col-ts">Timestamp</th>
+                    <th>Severity</th>
+                    <th>Service</th>
+                    <th>Request ID</th>
+                    <th class="col-msg">Message</th>
+                  </tr>
+                </thead>
+                <tbody id="logBody"></tbody>
+                <tbody id="logSkeleton" class="hidden"></tbody>
+              </table>
+
+              <div id="logEmpty" class="state-box hidden">
+                <svg class="state-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                <strong>No log entries match.</strong><br />
+                Try widening the date range or <button class="btn-link" id="clearFiltersLink">clearing the filters</button>.
+              </div>
+              <div id="logError" class="state-box state-error hidden">
+                <span id="logErrorMsg">Could not load log entries.</span>
+                <button class="btn-link" id="logRetry">Retry</button>
+              </div>
             </div>
-            <div id="logEmpty" class="state-box hidden">
-              <strong>No log entries match these filters.</strong><br />
-              Try widening the date range or clearing the request ID.
-            </div>
-            <div id="logError" class="state-box state-error hidden">
-              <span id="logErrorMsg">Could not load log entries.</span>
-              <button class="btn-link" id="logRetry">Retry</button>
+
+            <div class="pagination">
+              <span id="pageInfo" class="page-info"></span>
+              <div class="pager-btns">
+                <button id="prevBtn" class="btn btn-ghost" disabled>← Prev</button>
+                <button id="nextBtn" class="btn btn-ghost" disabled>Next →</button>
+              </div>
             </div>
           </div>
-
-          <div class="pagination">
-            <span id="pageInfo" class="page-info"></span>
-            <div>
-              <button id="prevBtn" class="btn btn-ghost" disabled>← Prev</button>
-              <button id="nextBtn" class="btn btn-ghost" disabled>Next →</button>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
+
+    <!-- Request trace drawer -->
+    <div id="traceOverlay" class="overlay hidden" aria-hidden="true">
+      <aside class="trace-panel" role="dialog" aria-modal="true" aria-label="Request trace">
+        <header class="trace-head">
+          <div class="trace-title">
+            <span class="trace-label">Request trace</span>
+            <button id="traceIdBtn" class="trace-id mono" title="Copy request ID"></button>
+          </div>
+          <div class="trace-actions">
+            <button id="traceCopyLink" class="btn btn-ghost btn-sm" title="Copy link to this trace">Copy link</button>
+            <button id="traceClose" class="icon-btn" title="Close (Esc)" aria-label="Close trace">
+              <svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </header>
+        <div id="traceMeta" class="trace-meta"></div>
+        <div id="traceLoading" class="skel-stack">
+          <div class="skel-line"></div><div class="skel-line w70"></div><div class="skel-line w50"></div>
+        </div>
+        <div id="traceEmpty" class="state-box hidden">No entries found for this request ID.</div>
+        <div id="traceError" class="state-box state-error hidden">Could not load the trace. <button class="btn-link" id="traceRetry">Retry</button></div>
+        <ol id="traceSteps" class="trace-steps hidden"></ol>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <span>Sift · Log Search &amp; Analyzer · v1.0.0</span>
+      <span class="footer-right">FastAPI + SQLite · <a href="https://github.com/kigbanib/20-log-search-and-analyzer" target="_blank" rel="noopener">source</a></span>
+    </footer>
 
     <script src="js/mock.js"></script>
     <script src="js/api.js"></script>

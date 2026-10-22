@@ -1,500 +1,500 @@
-{"timestamp": "2026-10-18T12:57:20.588447Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-10b62b"}
-{"timestamp": "2026-10-18T13:01:08.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-52badf"}
-{"timestamp": "2026-10-18T13:15:29.588447Z", "severity": "INFO", "service": "user-service", "message": "User login successful", "request_id": "req-88b37a"}
-{"timestamp": "2026-10-18T13:26:20.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-25826d"}
-{"timestamp": "2026-10-18T13:46:27.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-863a05"}
-{"timestamp": "2026-10-18T13:47:11.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-62e609"}
-{"timestamp": "2026-10-18T13:50:34.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-5936cc"}
-{"timestamp": "2026-10-18T14:00:32.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined"}
-{"timestamp": "2026-10-18T14:08:23.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-18T14:40:23.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-a61bbb"}
-{"timestamp": "2026-10-18T14:55:50.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-0d961f"}
-{"timestamp": "2026-10-18T15:28:13.588447Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
-{"timestamp": "2026-10-18T15:32:47.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-a09a50"}
-{"timestamp": "2026-10-18T15:59:34.588447Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-64e1c9"}
-{"timestamp": "2026-10-18T16:04:04.588447Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-18T16:04:30.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "Cache hit for key user:42", "request_id": "req-40a7b4"}
-{"timestamp": "2026-10-18T16:26:27.588447Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-f0f0c2"}
-{"timestamp": "2026-10-18T16:26:40.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Out of memory: worker killed", "request_id": "req-7906bb"}
-{"timestamp": "2026-10-18T16:29:09.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-c5cf83"}
-{"timestamp": "2026-10-18T16:30:49.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-143f93"}
-{"timestamp": "2026-10-18T16:35:30.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-18T16:38:19.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-18T16:50:49.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Out of memory: worker killed", "request_id": "req-de2967"}
-{"timestamp": "2026-10-18T16:54:09.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-18T17:20:03.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-7bdf50"}
-{"timestamp": "2026-10-18T17:38:57.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-becb91"}
-{"timestamp": "2026-10-18T17:39:38.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "Entering processOrder()", "request_id": "req-18ec1a"}
-{"timestamp": "2026-10-18T17:41:20.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-c7e98d"}
-{"timestamp": "2026-10-18T17:45:01.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-7e0ff0"}
-{"timestamp": "2026-10-18T17:56:38.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-731a39"}
-{"timestamp": "2026-10-18T18:00:33.588447Z", "severity": "WARN", "service": "billing-service", "message": "Slow query detected (2.3s)", "request_id": "req-eb64e8"}
-{"timestamp": "2026-10-18T18:12:34.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-cb82ef"}
-{"timestamp": "2026-10-18T18:13:30.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-491a63"}
-{"timestamp": "2026-10-18T18:14:23.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-4bd2f2"}
-{"timestamp": "2026-10-18T18:30:40.588447Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-4946b9"}
-{"timestamp": "2026-10-18T18:38:37.588447Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
-{"timestamp": "2026-10-18T18:42:05.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-e2539d"}
-{"timestamp": "2026-10-18T18:42:11.588447Z", "severity": "INFO", "service": "payment-service", "message": "Request completed", "request_id": "req-32bb05"}
-{"timestamp": "2026-10-18T18:52:25.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Database connection timeout"}
-{"timestamp": "2026-10-18T18:57:48.588447Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-738d43"}
-{"timestamp": "2026-10-18T19:09:12.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Out of memory: worker killed", "request_id": "req-94aa5d"}
-{"timestamp": "2026-10-18T19:19:26.588447Z", "severity": "INFO", "service": "api-gateway", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-66ce93"}
-{"timestamp": "2026-10-18T19:24:39.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-0a9f25"}
-{"timestamp": "2026-10-18T19:26:32.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-bd7799"}
-{"timestamp": "2026-10-18T19:37:45.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-d27bff"}
-{"timestamp": "2026-10-18T19:38:33.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-4cfdbb"}
-{"timestamp": "2026-10-18T19:46:27.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-b5794d"}
-{"timestamp": "2026-10-18T19:48:37.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-d615c1"}
-{"timestamp": "2026-10-18T19:59:44.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Brute force threshold exceeded from IP 192.168.1.105"}
-{"timestamp": "2026-10-18T20:01:17.588447Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-4f086f"}
-{"timestamp": "2026-10-18T20:13:27.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Out of memory: worker killed", "request_id": "req-1045d1"}
-{"timestamp": "2026-10-18T20:14:45.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-4f219d"}
-{"timestamp": "2026-10-18T21:07:35.588447Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful", "request_id": "req-0d7124"}
-{"timestamp": "2026-10-18T21:09:35.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-87eb35"}
-{"timestamp": "2026-10-18T21:12:45.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-69ea83"}
-{"timestamp": "2026-10-18T21:38:00.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-ea0acb"}
-{"timestamp": "2026-10-18T22:06:21.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined", "request_id": "req-1c5f12"}
-{"timestamp": "2026-10-18T22:06:36.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-d8a589"}
-{"timestamp": "2026-10-18T22:07:47.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-ad9c96"}
-{"timestamp": "2026-10-18T22:10:04.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-b55566"}
-{"timestamp": "2026-10-18T22:23:03.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler", "request_id": "req-839195"}
-{"timestamp": "2026-10-18T22:23:43.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-617d68"}
-{"timestamp": "2026-10-18T22:38:39.588447Z", "severity": "DEBUG", "service": "user-service", "message": "SQL query executed in 12ms", "request_id": "req-e3e59d"}
-{"timestamp": "2026-10-18T22:45:24.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
-{"timestamp": "2026-10-18T22:46:21.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Database connection timeout"}
-{"timestamp": "2026-10-18T22:46:40.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-33c8b8"}
-{"timestamp": "2026-10-18T22:52:15.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-20648d"}
-{"timestamp": "2026-10-18T22:55:42.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-db5bad"}
-{"timestamp": "2026-10-18T23:11:31.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined", "request_id": "req-0fb249"}
-{"timestamp": "2026-10-18T23:31:17.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-18T23:56:01.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-275d86"}
-{"timestamp": "2026-10-18T23:59:27.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-a223a6"}
-{"timestamp": "2026-10-19T00:01:40.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Database connection timeout", "request_id": "req-bc30f6"}
-{"timestamp": "2026-10-19T00:01:58.588447Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful", "request_id": "req-1f35d4"}
-{"timestamp": "2026-10-19T00:11:50.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-19T00:44:31.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T00:50:34.588447Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-19T00:52:16.588447Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-19T00:56:11.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-27623c"}
-{"timestamp": "2026-10-19T01:05:10.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-1e1220"}
-{"timestamp": "2026-10-19T01:13:38.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-15176b"}
-{"timestamp": "2026-10-19T01:32:23.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-2c68e4"}
-{"timestamp": "2026-10-19T01:35:12.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-ee03ef"}
-{"timestamp": "2026-10-19T01:49:15.588447Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-cbed74"}
-{"timestamp": "2026-10-19T01:49:17.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-7f0fc6"}
-{"timestamp": "2026-10-19T01:49:38.588447Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-8c7288"}
-{"timestamp": "2026-10-19T02:17:09.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Out of memory: worker killed", "request_id": "req-973bfa"}
-{"timestamp": "2026-10-19T02:42:30.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-90e534"}
-{"timestamp": "2026-10-19T02:49:26.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-8ee978"}
-{"timestamp": "2026-10-19T03:15:39.588447Z", "severity": "INFO", "service": "auth-service", "message": "Request completed"}
-{"timestamp": "2026-10-19T03:16:40.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
-{"timestamp": "2026-10-19T03:23:44.588447Z", "severity": "INFO", "service": "payment-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T03:38:47.588447Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-94326a"}
-{"timestamp": "2026-10-19T03:43:03.588447Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-1c7c4b"}
-{"timestamp": "2026-10-19T04:12:21.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Out of memory: worker killed"}
-{"timestamp": "2026-10-19T04:12:24.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-8d7313"}
-{"timestamp": "2026-10-19T04:20:34.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-8b11f8"}
-{"timestamp": "2026-10-19T04:26:22.588447Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-b7cc25"}
-{"timestamp": "2026-10-19T04:34:54.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T04:48:46.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-0353ce"}
-{"timestamp": "2026-10-19T04:53:49.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-bcf03f"}
-{"timestamp": "2026-10-19T05:05:17.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Out of memory: worker killed", "request_id": "req-7e9bea"}
-{"timestamp": "2026-10-19T05:07:22.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-75d199"}
-{"timestamp": "2026-10-19T05:10:11.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-1d80e2"}
-{"timestamp": "2026-10-19T05:19:33.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-3375af"}
-{"timestamp": "2026-10-19T05:21:21.588447Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-c29fe7"}
-{"timestamp": "2026-10-19T05:25:54.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T05:29:30.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-17d6f8"}
-{"timestamp": "2026-10-19T05:36:02.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-20e29a"}
-{"timestamp": "2026-10-19T05:36:59.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-e876cb"}
-{"timestamp": "2026-10-19T05:40:05.588447Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client", "request_id": "req-04cfbd"}
-{"timestamp": "2026-10-19T05:47:14.588447Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-a7f070"}
-{"timestamp": "2026-10-19T05:48:01.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-635616"}
-{"timestamp": "2026-10-19T05:56:43.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-19T05:57:55.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T06:05:30.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T06:21:49.588447Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-48211d"}
-{"timestamp": "2026-10-19T06:26:42.588447Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed", "request_id": "req-e64a75"}
-{"timestamp": "2026-10-19T06:32:33.588447Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined"}
-{"timestamp": "2026-10-19T06:34:54.588447Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)"}
-{"timestamp": "2026-10-19T06:50:11.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-cc9ab2"}
-{"timestamp": "2026-10-19T06:50:21.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-19T06:56:13.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-c62335"}
-{"timestamp": "2026-10-19T07:00:33.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-9b0bd3"}
-{"timestamp": "2026-10-19T07:00:39.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-142f32"}
-{"timestamp": "2026-10-19T07:02:48.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-16928a"}
-{"timestamp": "2026-10-19T07:08:23.588447Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-0096df"}
-{"timestamp": "2026-10-19T07:17:23.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-173039"}
-{"timestamp": "2026-10-19T07:29:55.588447Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-b4506f"}
-{"timestamp": "2026-10-19T07:36:05.588447Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-712b12"}
-{"timestamp": "2026-10-19T07:42:17.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Retrying upstream call (attempt 2)", "request_id": "req-acccdf"}
-{"timestamp": "2026-10-19T07:48:23.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Out of memory: worker killed", "request_id": "req-ee4840"}
-{"timestamp": "2026-10-19T08:01:08.588447Z", "severity": "INFO", "service": "user-service", "message": "Health check passed"}
-{"timestamp": "2026-10-19T08:05:03.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-208aad"}
-{"timestamp": "2026-10-19T08:06:08.588447Z", "severity": "WARN", "service": "payment-service", "message": "Deprecated API version used by client", "request_id": "req-25245f"}
-{"timestamp": "2026-10-19T08:11:20.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-13d3b6"}
-{"timestamp": "2026-10-19T08:13:36.588447Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-eb01c0"}
-{"timestamp": "2026-10-19T08:15:25.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T08:37:29.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-2ef514"}
-{"timestamp": "2026-10-19T08:47:12.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Unhandled exception in request handler", "request_id": "req-96fcd6"}
-{"timestamp": "2026-10-19T08:49:58.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
-{"timestamp": "2026-10-19T08:50:59.588447Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T09:00:08.588447Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-19T09:04:18.588447Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-c20ae2"}
-{"timestamp": "2026-10-19T09:34:06.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-19T09:43:01.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-ca0028"}
-{"timestamp": "2026-10-19T09:44:53.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-a10864"}
-{"timestamp": "2026-10-19T09:50:33.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-57ffc2"}
-{"timestamp": "2026-10-19T10:15:21.588447Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed"}
-{"timestamp": "2026-10-19T10:25:09.588447Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)"}
-{"timestamp": "2026-10-19T10:38:16.588447Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms"}
-{"timestamp": "2026-10-19T10:38:33.588447Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-59ab0e"}
-{"timestamp": "2026-10-19T10:50:17.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-3c10de"}
-{"timestamp": "2026-10-19T10:59:52.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-19T11:06:06.588447Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-19T11:15:23.588447Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-434868"}
-{"timestamp": "2026-10-19T11:18:14.588447Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-2fd911"}
-{"timestamp": "2026-10-19T11:21:50.588447Z", "severity": "WARN", "service": "user-service", "message": "Slow query detected (2.3s)"}
-{"timestamp": "2026-10-19T11:27:12.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-19T11:31:20.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-42f3c7"}
-{"timestamp": "2026-10-19T11:38:20.588447Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-fb654f"}
-{"timestamp": "2026-10-19T11:50:49.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-8c02a0"}
-{"timestamp": "2026-10-19T12:15:22.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-286053"}
-{"timestamp": "2026-10-19T12:22:51.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-4a881f"}
-{"timestamp": "2026-10-19T12:38:21.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Upstream service returned 502", "request_id": "req-555276"}
-{"timestamp": "2026-10-19T12:39:14.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-59f4ab"}
-{"timestamp": "2026-10-19T12:48:43.588447Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)"}
-{"timestamp": "2026-10-19T12:50:25.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-5f557c"}
-{"timestamp": "2026-10-19T13:00:43.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-19T13:02:07.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-9ed6b1"}
-{"timestamp": "2026-10-19T13:02:46.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-19T13:12:59.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed"}
-{"timestamp": "2026-10-19T13:14:13.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-41586e"}
-{"timestamp": "2026-10-19T13:15:23.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T13:26:55.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-888f9d"}
-{"timestamp": "2026-10-19T13:43:43.588447Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-fa20d8"}
-{"timestamp": "2026-10-19T13:52:50.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-2bf529"}
-{"timestamp": "2026-10-19T14:10:29.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-e059ba"}
-{"timestamp": "2026-10-19T14:13:19.588447Z", "severity": "INFO", "service": "payment-service", "message": "User login successful"}
-{"timestamp": "2026-10-19T14:19:49.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-0e21a8"}
-{"timestamp": "2026-10-19T14:27:07.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T14:37:51.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-248ede"}
-{"timestamp": "2026-10-19T14:45:17.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42", "request_id": "req-bc6d02"}
-{"timestamp": "2026-10-19T14:58:09.588447Z", "severity": "INFO", "service": "auth-service", "message": "User login successful"}
-{"timestamp": "2026-10-19T15:01:34.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-e3b46b"}
-{"timestamp": "2026-10-19T15:03:25.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-641ee5"}
-{"timestamp": "2026-10-19T15:15:32.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-ad3e75"}
-{"timestamp": "2026-10-19T15:16:57.588447Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-3fcee3"}
-{"timestamp": "2026-10-19T15:20:25.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-5c1f6b"}
-{"timestamp": "2026-10-19T15:31:28.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-e8f2f6"}
-{"timestamp": "2026-10-19T15:32:46.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-c384c8"}
-{"timestamp": "2026-10-19T15:44:31.588447Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-b9b1fc"}
-{"timestamp": "2026-10-19T16:01:41.588447Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-44173d"}
-{"timestamp": "2026-10-19T16:10:25.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-19T16:23:30.588447Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-a60862"}
-{"timestamp": "2026-10-19T16:46:24.588447Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-b7c97e"}
-{"timestamp": "2026-10-19T17:11:25.588447Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-f92cfe"}
-{"timestamp": "2026-10-19T17:23:45.588447Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-18e9b8"}
-{"timestamp": "2026-10-19T17:34:27.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-a8b9b1"}
-{"timestamp": "2026-10-19T17:34:46.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
-{"timestamp": "2026-10-19T17:47:43.588447Z", "severity": "WARN", "service": "billing-service", "message": "Slow query detected (2.3s)", "request_id": "req-a00316"}
-{"timestamp": "2026-10-19T17:48:52.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-7eed7c"}
-{"timestamp": "2026-10-19T17:56:55.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-7f0007"}
-{"timestamp": "2026-10-19T17:57:49.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)"}
-{"timestamp": "2026-10-19T18:03:45.588447Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
-{"timestamp": "2026-10-19T18:19:49.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-a4fdd9"}
-{"timestamp": "2026-10-19T18:55:14.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-19T18:58:14.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-19T19:01:31.588447Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-498ef1"}
-{"timestamp": "2026-10-19T19:02:11.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-0a0017"}
-{"timestamp": "2026-10-19T19:36:48.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-1ed9d3"}
-{"timestamp": "2026-10-19T20:03:25.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-146d19"}
-{"timestamp": "2026-10-19T20:03:58.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-9de925"}
-{"timestamp": "2026-10-19T20:04:39.588447Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-e83102"}
-{"timestamp": "2026-10-19T20:08:37.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-34e2cf"}
-{"timestamp": "2026-10-19T20:19:44.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-def82b"}
-{"timestamp": "2026-10-19T20:25:10.588447Z", "severity": "INFO", "service": "user-service", "message": "Request completed", "request_id": "req-86daed"}
-{"timestamp": "2026-10-19T20:28:42.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-2c5f14"}
-{"timestamp": "2026-10-19T20:32:17.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-19T20:34:43.588447Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-c5f64d"}
-{"timestamp": "2026-10-19T20:35:19.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-cb1ca9"}
-{"timestamp": "2026-10-19T20:41:17.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-d17b01"}
-{"timestamp": "2026-10-19T20:47:28.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T20:49:00.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-45b21b"}
-{"timestamp": "2026-10-19T20:55:35.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-d93f05"}
-{"timestamp": "2026-10-19T21:04:06.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-178c20"}
-{"timestamp": "2026-10-19T21:13:17.588447Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-4d2e70"}
-{"timestamp": "2026-10-19T21:25:37.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-4c8dd5"}
-{"timestamp": "2026-10-19T21:27:39.588447Z", "severity": "ERROR", "service": "user-service", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-d62b82"}
-{"timestamp": "2026-10-19T21:30:33.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-4d3da9"}
-{"timestamp": "2026-10-19T21:46:43.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-1d8fac"}
-{"timestamp": "2026-10-19T21:47:57.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-6e1780"}
-{"timestamp": "2026-10-19T21:59:57.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-a274e0"}
-{"timestamp": "2026-10-19T22:01:22.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-45e46b"}
-{"timestamp": "2026-10-19T22:06:04.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-19T22:06:52.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-da4089"}
-{"timestamp": "2026-10-19T22:13:57.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler", "request_id": "req-627072"}
-{"timestamp": "2026-10-19T22:21:44.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-956ee0"}
-{"timestamp": "2026-10-19T22:26:54.588447Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-322117"}
-{"timestamp": "2026-10-19T22:37:12.588447Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-56e1ca"}
-{"timestamp": "2026-10-19T22:41:39.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-a3f59d"}
-{"timestamp": "2026-10-19T22:42:43.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-fe9b21"}
-{"timestamp": "2026-10-19T22:46:06.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()"}
-{"timestamp": "2026-10-19T23:00:27.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()", "request_id": "req-b32e00"}
-{"timestamp": "2026-10-19T23:13:21.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-b42082"}
-{"timestamp": "2026-10-19T23:14:40.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-83325f"}
-{"timestamp": "2026-10-19T23:21:33.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Token refresh rejected: replay attack suspected"}
-{"timestamp": "2026-10-19T23:26:24.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-e76d41"}
-{"timestamp": "2026-10-19T23:31:39.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-1e4a8e"}
-{"timestamp": "2026-10-19T23:37:11.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Retrying upstream call (attempt 2)", "request_id": "req-8144d8"}
-{"timestamp": "2026-10-20T00:18:45.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-c7184a"}
-{"timestamp": "2026-10-20T00:23:38.588447Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-20T00:29:07.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-dd1b2c"}
-{"timestamp": "2026-10-20T00:49:46.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-e16fd0"}
-{"timestamp": "2026-10-20T01:01:36.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-cfeb5c"}
-{"timestamp": "2026-10-20T01:04:45.588447Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
-{"timestamp": "2026-10-20T01:06:49.588447Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-20T01:10:31.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()"}
-{"timestamp": "2026-10-20T01:22:52.588447Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-46dc2c"}
-{"timestamp": "2026-10-20T01:26:57.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-9a6f4a"}
-{"timestamp": "2026-10-20T01:28:46.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-3cd4cc"}
-{"timestamp": "2026-10-20T01:35:13.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-20T01:36:13.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-360930"}
-{"timestamp": "2026-10-20T01:43:46.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-4318dc"}
-{"timestamp": "2026-10-20T01:48:56.588447Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-7cca4c"}
-{"timestamp": "2026-10-20T02:54:47.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-d32512"}
-{"timestamp": "2026-10-20T03:01:37.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-20T03:02:26.588447Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)"}
-{"timestamp": "2026-10-20T03:16:11.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-0ba3f6"}
-{"timestamp": "2026-10-20T03:17:23.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-3aa686"}
-{"timestamp": "2026-10-20T03:29:42.588447Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-4f6c11"}
-{"timestamp": "2026-10-20T03:30:55.588447Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-92c8d7"}
-{"timestamp": "2026-10-20T03:48:27.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-b92839"}
-{"timestamp": "2026-10-20T03:48:43.588447Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-20T03:54:36.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed"}
-{"timestamp": "2026-10-20T04:02:13.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-20T04:20:52.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()"}
-{"timestamp": "2026-10-20T04:31:13.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-ede30d"}
-{"timestamp": "2026-10-20T04:43:24.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-20T04:50:10.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-f38ee7"}
-{"timestamp": "2026-10-20T04:57:00.588447Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-7a44b8"}
-{"timestamp": "2026-10-20T04:58:28.588447Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-3a1793"}
-{"timestamp": "2026-10-20T05:06:12.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Token refresh rejected: replay attack suspected"}
-{"timestamp": "2026-10-20T05:08:28.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()", "request_id": "req-521475"}
-{"timestamp": "2026-10-20T05:13:56.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
-{"timestamp": "2026-10-20T05:22:51.588447Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-cd829b"}
-{"timestamp": "2026-10-20T05:27:04.588447Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client", "request_id": "req-cab9ca"}
-{"timestamp": "2026-10-20T05:37:46.588447Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d6cb4d"}
-{"timestamp": "2026-10-20T05:42:45.588447Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-c6dedc"}
-{"timestamp": "2026-10-20T05:50:32.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-4cb973"}
-{"timestamp": "2026-10-20T05:54:10.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-29469e"}
-{"timestamp": "2026-10-20T06:15:05.588447Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-acd539"}
-{"timestamp": "2026-10-20T06:23:52.588447Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-20T06:33:09.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-8eb06c"}
-{"timestamp": "2026-10-20T06:37:02.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
-{"timestamp": "2026-10-20T06:41:10.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-d5dbfb"}
-{"timestamp": "2026-10-20T06:41:20.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-20T06:46:41.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-9b9054"}
-{"timestamp": "2026-10-20T06:48:08.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
-{"timestamp": "2026-10-20T06:54:59.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-a1fb3a"}
-{"timestamp": "2026-10-20T07:15:06.588447Z", "severity": "WARN", "service": "payment-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-c2a84e"}
-{"timestamp": "2026-10-20T07:19:37.588447Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-20T07:31:46.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms"}
-{"timestamp": "2026-10-20T07:36:35.588447Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-1e24b3"}
-{"timestamp": "2026-10-20T07:52:33.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-3dfaed"}
-{"timestamp": "2026-10-20T08:11:24.588447Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-efa43c"}
-{"timestamp": "2026-10-20T08:13:35.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-1a4b39"}
-{"timestamp": "2026-10-20T08:15:03.588447Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)"}
-{"timestamp": "2026-10-20T08:18:30.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-0d3e29"}
-{"timestamp": "2026-10-20T08:37:34.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
-{"timestamp": "2026-10-20T08:37:48.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-28feca"}
-{"timestamp": "2026-10-20T08:57:57.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms"}
-{"timestamp": "2026-10-20T09:06:23.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-9e333d"}
-{"timestamp": "2026-10-20T09:06:59.588447Z", "severity": "CRITICAL", "service": "payment-service", "message": "Disk quota exceeded on volume /data"}
-{"timestamp": "2026-10-20T09:18:58.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed"}
-{"timestamp": "2026-10-20T09:30:07.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-4ef28d"}
-{"timestamp": "2026-10-20T09:32:39.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-1500ed"}
-{"timestamp": "2026-10-20T09:39:10.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-facd2e"}
-{"timestamp": "2026-10-20T10:18:06.588447Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-43142a"}
-{"timestamp": "2026-10-20T10:20:39.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-c326b3"}
-{"timestamp": "2026-10-20T11:11:55.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Webhook receiver down: Stripe event delivery stalled"}
-{"timestamp": "2026-10-20T11:12:32.588447Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)", "request_id": "req-f054cb"}
-{"timestamp": "2026-10-20T11:19:20.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-20T11:43:17.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-15c958"}
-{"timestamp": "2026-10-20T11:47:38.588447Z", "severity": "WARN", "service": "user-service", "message": "Slow query detected (2.3s)"}
-{"timestamp": "2026-10-20T11:48:10.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-5c4b6b"}
-{"timestamp": "2026-10-20T11:55:12.588447Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful"}
-{"timestamp": "2026-10-20T12:02:13.588447Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)"}
-{"timestamp": "2026-10-20T12:04:49.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-f9d440"}
-{"timestamp": "2026-10-20T12:10:28.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-0f81a2"}
-{"timestamp": "2026-10-20T12:20:59.588447Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-c93efb"}
-{"timestamp": "2026-10-20T12:21:51.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-f3b6f0"}
-{"timestamp": "2026-10-20T12:32:00.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)"}
-{"timestamp": "2026-10-20T12:39:00.588447Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-ff3a7c"}
-{"timestamp": "2026-10-20T12:43:23.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-25dec2"}
-{"timestamp": "2026-10-20T12:44:12.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-20T12:50:05.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Slow query detected (2.3s)"}
-{"timestamp": "2026-10-20T12:58:57.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-58ab5d"}
-{"timestamp": "2026-10-20T13:10:46.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-9a161a"}
-{"timestamp": "2026-10-20T13:11:33.588447Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful", "request_id": "req-f2d33d"}
-{"timestamp": "2026-10-20T13:25:07.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-20T13:32:11.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout"}
-{"timestamp": "2026-10-20T13:32:58.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-d88b2d"}
-{"timestamp": "2026-10-20T13:33:30.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-fdae1d"}
-{"timestamp": "2026-10-20T13:45:56.588447Z", "severity": "WARN", "service": "payment-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-20T14:03:39.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-20T14:11:47.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-20T14:24:05.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-20T14:24:05.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-6b5708"}
-{"timestamp": "2026-10-20T14:43:09.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-970f2b"}
-{"timestamp": "2026-10-20T14:43:15.588447Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)"}
-{"timestamp": "2026-10-20T14:59:16.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-20T15:01:40.588447Z", "severity": "INFO", "service": "user-service", "message": "Health check passed"}
-{"timestamp": "2026-10-20T15:02:29.588447Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-f17645"}
-{"timestamp": "2026-10-20T15:12:44.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-799d8e"}
-{"timestamp": "2026-10-20T15:28:04.588447Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached"}
-{"timestamp": "2026-10-20T15:56:28.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-3dc69b"}
-{"timestamp": "2026-10-20T16:17:17.588447Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-51472e"}
-{"timestamp": "2026-10-20T16:22:10.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-381e17"}
-{"timestamp": "2026-10-20T16:54:05.588447Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client"}
-{"timestamp": "2026-10-20T17:05:01.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed"}
-{"timestamp": "2026-10-20T17:10:18.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-a70172"}
-{"timestamp": "2026-10-20T17:11:42.588447Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-f3c279"}
-{"timestamp": "2026-10-20T17:16:59.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed", "request_id": "req-5ecbf5"}
-{"timestamp": "2026-10-20T17:32:32.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Failed to charge card: card declined", "request_id": "req-56c8ee"}
-{"timestamp": "2026-10-20T17:47:15.588447Z", "severity": "INFO", "service": "auth-service", "message": "User login successful"}
-{"timestamp": "2026-10-20T18:44:08.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-394788"}
-{"timestamp": "2026-10-20T18:44:13.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-d5cccb"}
-{"timestamp": "2026-10-20T18:45:32.588447Z", "severity": "INFO", "service": "payment-service", "message": "User login successful"}
-{"timestamp": "2026-10-20T18:49:19.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-20T18:59:18.588447Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-4de0bf"}
-{"timestamp": "2026-10-20T19:08:48.588447Z", "severity": "WARN", "service": "payment-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-cb135b"}
-{"timestamp": "2026-10-20T19:10:43.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-35136e"}
-{"timestamp": "2026-10-20T19:12:33.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-6fd3a5"}
-{"timestamp": "2026-10-20T19:13:36.588447Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-509b05"}
-{"timestamp": "2026-10-20T19:17:53.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502", "request_id": "req-ce1598"}
-{"timestamp": "2026-10-20T19:47:42.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-d82559"}
-{"timestamp": "2026-10-20T20:00:55.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-4f9b02"}
-{"timestamp": "2026-10-20T20:09:02.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-20T20:11:30.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-29ef9d"}
-{"timestamp": "2026-10-20T20:14:15.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-29eae7"}
-{"timestamp": "2026-10-20T20:18:05.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-299167"}
-{"timestamp": "2026-10-20T20:26:56.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Disk quota exceeded on volume /data", "request_id": "req-e26be4"}
-{"timestamp": "2026-10-20T20:36:16.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-3aa40d"}
-{"timestamp": "2026-10-20T20:45:20.588447Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d739ae"}
-{"timestamp": "2026-10-20T20:54:57.588447Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-fa5e9c"}
-{"timestamp": "2026-10-20T20:56:23.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined"}
-{"timestamp": "2026-10-20T21:02:16.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-a57b8c"}
-{"timestamp": "2026-10-20T21:14:42.588447Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-db8f95"}
-{"timestamp": "2026-10-20T21:23:52.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed", "request_id": "req-9fb8dc"}
-{"timestamp": "2026-10-20T21:29:40.588447Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-634758"}
-{"timestamp": "2026-10-20T21:58:52.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-20T22:11:17.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8055bf"}
-{"timestamp": "2026-10-20T22:22:03.588447Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-cbe405"}
-{"timestamp": "2026-10-20T22:33:21.588447Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
-{"timestamp": "2026-10-20T22:44:25.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-234e4c"}
-{"timestamp": "2026-10-20T22:44:52.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-25fc51"}
-{"timestamp": "2026-10-20T22:52:24.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
-{"timestamp": "2026-10-20T22:54:24.588447Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-437bb6"}
-{"timestamp": "2026-10-20T23:05:55.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)"}
-{"timestamp": "2026-10-20T23:06:40.588447Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-20T23:18:51.588447Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-3e22b6"}
-{"timestamp": "2026-10-20T23:52:19.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-a8c75b"}
-{"timestamp": "2026-10-21T00:08:12.588447Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502"}
-{"timestamp": "2026-10-21T00:21:11.588447Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed"}
-{"timestamp": "2026-10-21T00:30:41.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-fab223"}
-{"timestamp": "2026-10-21T00:51:09.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-8780fa"}
-{"timestamp": "2026-10-21T01:11:10.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Failed to charge card: card declined", "request_id": "req-4b8c38"}
-{"timestamp": "2026-10-21T01:12:08.588447Z", "severity": "CRITICAL", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-191c53"}
-{"timestamp": "2026-10-21T01:18:03.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-52ed55"}
-{"timestamp": "2026-10-21T01:19:23.588447Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-2e3b57"}
-{"timestamp": "2026-10-21T01:28:20.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-99482b"}
-{"timestamp": "2026-10-21T01:39:04.588447Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-943503"}
-{"timestamp": "2026-10-21T01:52:04.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Disk quota exceeded on volume /data"}
-{"timestamp": "2026-10-21T01:55:04.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-8c9809"}
-{"timestamp": "2026-10-21T02:02:57.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-52b68e"}
-{"timestamp": "2026-10-21T02:08:07.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Entering processOrder()", "request_id": "req-cd6578"}
-{"timestamp": "2026-10-21T02:15:15.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-28446e"}
-{"timestamp": "2026-10-21T02:26:49.588447Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-6186ce"}
-{"timestamp": "2026-10-21T02:28:24.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-eb39bc"}
-{"timestamp": "2026-10-21T02:33:32.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout"}
-{"timestamp": "2026-10-21T02:54:25.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-70ea72"}
-{"timestamp": "2026-10-21T03:08:46.588447Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-c7ac54"}
-{"timestamp": "2026-10-21T03:16:54.588447Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-ebacdd"}
-{"timestamp": "2026-10-21T03:39:17.588447Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-2b5dbc"}
-{"timestamp": "2026-10-21T03:40:38.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-88cada"}
-{"timestamp": "2026-10-21T03:41:36.588447Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-9b0b47"}
-{"timestamp": "2026-10-21T03:46:01.588447Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-aa3591"}
-{"timestamp": "2026-10-21T03:58:24.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-6cec19"}
-{"timestamp": "2026-10-21T04:06:54.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-1d5e09"}
-{"timestamp": "2026-10-21T04:17:08.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-932357"}
-{"timestamp": "2026-10-21T04:19:02.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-a66ce4"}
-{"timestamp": "2026-10-21T04:19:51.588447Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-be0f83"}
-{"timestamp": "2026-10-21T04:21:17.588447Z", "severity": "WARN", "service": "auth-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-81de72"}
-{"timestamp": "2026-10-21T04:22:33.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-aa7a4c"}
-{"timestamp": "2026-10-21T04:34:04.588447Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901"}
-{"timestamp": "2026-10-21T04:36:11.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-36f01d"}
-{"timestamp": "2026-10-21T04:41:43.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-4063ae"}
-{"timestamp": "2026-10-21T05:08:58.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-f51397"}
-{"timestamp": "2026-10-21T05:22:08.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-d697c8"}
-{"timestamp": "2026-10-21T05:30:53.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-39acd6"}
-{"timestamp": "2026-10-21T05:39:56.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-592274"}
-{"timestamp": "2026-10-21T05:47:48.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-c93157"}
-{"timestamp": "2026-10-21T06:05:36.588447Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-7e9634"}
-{"timestamp": "2026-10-21T06:08:17.588447Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-2e8bad"}
-{"timestamp": "2026-10-21T06:13:02.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)"}
-{"timestamp": "2026-10-21T06:13:06.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms"}
-{"timestamp": "2026-10-21T06:43:41.588447Z", "severity": "INFO", "service": "api-gateway", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-4b9e00"}
-{"timestamp": "2026-10-21T06:52:29.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-1318c1"}
-{"timestamp": "2026-10-21T07:04:11.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Unhandled exception in request handler", "request_id": "req-75d213"}
-{"timestamp": "2026-10-21T07:15:36.588447Z", "severity": "INFO", "service": "user-service", "message": "User login successful", "request_id": "req-129b22"}
-{"timestamp": "2026-10-21T07:16:58.588447Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-6ddc2c"}
-{"timestamp": "2026-10-21T07:19:11.588447Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-efc921"}
-{"timestamp": "2026-10-21T07:20:25.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-714ad6"}
-{"timestamp": "2026-10-21T07:23:53.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-c2e618"}
-{"timestamp": "2026-10-21T07:24:27.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-9ab8ab"}
-{"timestamp": "2026-10-21T07:28:01.588447Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-fbc37b"}
-{"timestamp": "2026-10-21T07:29:26.588447Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler"}
-{"timestamp": "2026-10-21T07:33:48.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-f02f33"}
-{"timestamp": "2026-10-21T07:50:16.588447Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-21T07:51:54.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed"}
-{"timestamp": "2026-10-21T08:03:21.588447Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42", "request_id": "req-10d880"}
-{"timestamp": "2026-10-21T08:10:22.588447Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-0cb0cc"}
-{"timestamp": "2026-10-21T08:18:42.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-0ec7f9"}
-{"timestamp": "2026-10-21T08:22:07.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-fce216"}
-{"timestamp": "2026-10-21T08:23:57.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "SQL query executed in 12ms", "request_id": "req-c73f88"}
-{"timestamp": "2026-10-21T08:24:56.588447Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful"}
-{"timestamp": "2026-10-21T08:36:33.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-36cd6b"}
-{"timestamp": "2026-10-21T08:45:16.588447Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-ef0264"}
-{"timestamp": "2026-10-21T08:48:54.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-5c2683"}
-{"timestamp": "2026-10-21T08:49:26.588447Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-7a350b"}
-{"timestamp": "2026-10-21T09:17:13.588447Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)", "request_id": "req-25ee19"}
-{"timestamp": "2026-10-21T09:24:15.588447Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-292fac"}
-{"timestamp": "2026-10-21T09:40:35.588447Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-d46d5e"}
-{"timestamp": "2026-10-21T09:56:26.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-e44ec9"}
-{"timestamp": "2026-10-21T10:01:22.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed"}
-{"timestamp": "2026-10-21T10:04:59.588447Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
-{"timestamp": "2026-10-21T10:13:53.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-05dae7"}
-{"timestamp": "2026-10-21T10:19:28.588447Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-f549e0"}
-{"timestamp": "2026-10-21T10:28:19.588447Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-9860ef"}
-{"timestamp": "2026-10-21T10:30:00.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-afd713"}
-{"timestamp": "2026-10-21T10:52:35.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-cb7984"}
-{"timestamp": "2026-10-21T10:59:00.588447Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-9f9947"}
-{"timestamp": "2026-10-21T11:09:42.588447Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
-{"timestamp": "2026-10-21T11:11:42.588447Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
-{"timestamp": "2026-10-21T11:13:34.588447Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-2b604a"}
-{"timestamp": "2026-10-21T11:13:52.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-c92ecb"}
-{"timestamp": "2026-10-21T11:18:55.588447Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-e6ae83"}
-{"timestamp": "2026-10-21T11:19:31.588447Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-a461bf"}
-{"timestamp": "2026-10-21T11:21:50.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-e5d9e2"}
-{"timestamp": "2026-10-21T11:31:53.588447Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-98cdc1"}
-{"timestamp": "2026-10-21T11:34:02.588447Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-b0643d"}
-{"timestamp": "2026-10-21T11:37:23.588447Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-070056"}
-{"timestamp": "2026-10-21T12:00:44.588447Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d9274f"}
-{"timestamp": "2026-10-21T12:06:53.588447Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-0da4b2"}
-{"timestamp": "2026-10-21T12:09:33.588447Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
-{"timestamp": "2026-10-21T12:10:29.588447Z", "severity": "ERROR", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-0de051"}
-{"timestamp": "2026-10-21T12:10:54.588447Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-204eb6"}
-{"timestamp": "2026-10-21T12:17:45.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
-{"timestamp": "2026-10-21T12:44:22.588447Z", "severity": "DEBUG", "service": "inventory-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-19T15:40:03.745856Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-10b62b"}
+{"timestamp": "2026-10-19T15:43:51.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-52badf"}
+{"timestamp": "2026-10-19T15:58:12.745856Z", "severity": "INFO", "service": "user-service", "message": "User login successful", "request_id": "req-88b37a"}
+{"timestamp": "2026-10-19T16:09:03.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-25826d"}
+{"timestamp": "2026-10-19T16:29:10.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-863a05"}
+{"timestamp": "2026-10-19T16:29:54.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-62e609"}
+{"timestamp": "2026-10-19T16:33:17.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-5936cc"}
+{"timestamp": "2026-10-19T16:43:15.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined"}
+{"timestamp": "2026-10-19T16:51:06.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-19T17:23:06.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-a61bbb"}
+{"timestamp": "2026-10-19T17:38:33.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-0d961f"}
+{"timestamp": "2026-10-19T18:10:56.745856Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
+{"timestamp": "2026-10-19T18:15:30.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-a09a50"}
+{"timestamp": "2026-10-19T18:42:17.745856Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-64e1c9"}
+{"timestamp": "2026-10-19T18:46:47.745856Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-19T18:47:13.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "Cache hit for key user:42", "request_id": "req-40a7b4"}
+{"timestamp": "2026-10-19T19:09:10.745856Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-f0f0c2"}
+{"timestamp": "2026-10-19T19:09:23.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Out of memory: worker killed", "request_id": "req-7906bb"}
+{"timestamp": "2026-10-19T19:11:52.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-c5cf83"}
+{"timestamp": "2026-10-19T19:13:32.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-143f93"}
+{"timestamp": "2026-10-19T19:18:13.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-19T19:21:02.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-19T19:33:32.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Out of memory: worker killed", "request_id": "req-de2967"}
+{"timestamp": "2026-10-19T19:36:52.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-19T20:02:46.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-7bdf50"}
+{"timestamp": "2026-10-19T20:21:40.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-becb91"}
+{"timestamp": "2026-10-19T20:22:21.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "Entering processOrder()", "request_id": "req-18ec1a"}
+{"timestamp": "2026-10-19T20:24:03.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-c7e98d"}
+{"timestamp": "2026-10-19T20:27:44.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-7e0ff0"}
+{"timestamp": "2026-10-19T20:39:21.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-731a39"}
+{"timestamp": "2026-10-19T20:43:16.745856Z", "severity": "WARN", "service": "billing-service", "message": "Slow query detected (2.3s)", "request_id": "req-eb64e8"}
+{"timestamp": "2026-10-19T20:55:17.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-cb82ef"}
+{"timestamp": "2026-10-19T20:56:13.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-491a63"}
+{"timestamp": "2026-10-19T20:57:06.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-4bd2f2"}
+{"timestamp": "2026-10-19T21:13:23.745856Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-4946b9"}
+{"timestamp": "2026-10-19T21:21:20.745856Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
+{"timestamp": "2026-10-19T21:24:48.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-e2539d"}
+{"timestamp": "2026-10-19T21:24:54.745856Z", "severity": "INFO", "service": "payment-service", "message": "Request completed", "request_id": "req-32bb05"}
+{"timestamp": "2026-10-19T21:35:08.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Database connection timeout"}
+{"timestamp": "2026-10-19T21:40:31.745856Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-738d43"}
+{"timestamp": "2026-10-19T21:51:55.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Out of memory: worker killed", "request_id": "req-94aa5d"}
+{"timestamp": "2026-10-19T22:02:09.745856Z", "severity": "INFO", "service": "api-gateway", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-66ce93"}
+{"timestamp": "2026-10-19T22:07:22.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-0a9f25"}
+{"timestamp": "2026-10-19T22:09:15.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-bd7799"}
+{"timestamp": "2026-10-19T22:20:28.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-d27bff"}
+{"timestamp": "2026-10-19T22:21:16.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-4cfdbb"}
+{"timestamp": "2026-10-19T22:29:10.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-b5794d"}
+{"timestamp": "2026-10-19T22:31:20.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-d615c1"}
+{"timestamp": "2026-10-19T22:42:27.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Brute force threshold exceeded from IP 192.168.1.105"}
+{"timestamp": "2026-10-19T22:44:00.745856Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-4f086f"}
+{"timestamp": "2026-10-19T22:56:10.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Out of memory: worker killed", "request_id": "req-1045d1"}
+{"timestamp": "2026-10-19T22:57:28.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-4f219d"}
+{"timestamp": "2026-10-19T23:50:18.745856Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful", "request_id": "req-0d7124"}
+{"timestamp": "2026-10-19T23:52:18.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-87eb35"}
+{"timestamp": "2026-10-19T23:55:28.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-69ea83"}
+{"timestamp": "2026-10-20T00:20:43.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-ea0acb"}
+{"timestamp": "2026-10-20T00:49:04.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined", "request_id": "req-1c5f12"}
+{"timestamp": "2026-10-20T00:49:19.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-d8a589"}
+{"timestamp": "2026-10-20T00:50:30.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-ad9c96"}
+{"timestamp": "2026-10-20T00:52:47.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-b55566"}
+{"timestamp": "2026-10-20T01:05:46.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler", "request_id": "req-839195"}
+{"timestamp": "2026-10-20T01:06:26.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-617d68"}
+{"timestamp": "2026-10-20T01:21:22.745856Z", "severity": "DEBUG", "service": "user-service", "message": "SQL query executed in 12ms", "request_id": "req-e3e59d"}
+{"timestamp": "2026-10-20T01:28:07.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
+{"timestamp": "2026-10-20T01:29:04.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Database connection timeout"}
+{"timestamp": "2026-10-20T01:29:23.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-33c8b8"}
+{"timestamp": "2026-10-20T01:34:58.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-20648d"}
+{"timestamp": "2026-10-20T01:38:25.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-db5bad"}
+{"timestamp": "2026-10-20T01:54:14.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined", "request_id": "req-0fb249"}
+{"timestamp": "2026-10-20T02:14:00.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-20T02:38:44.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-275d86"}
+{"timestamp": "2026-10-20T02:42:10.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-a223a6"}
+{"timestamp": "2026-10-20T02:44:23.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Database connection timeout", "request_id": "req-bc30f6"}
+{"timestamp": "2026-10-20T02:44:41.745856Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful", "request_id": "req-1f35d4"}
+{"timestamp": "2026-10-20T02:54:33.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-20T03:27:14.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T03:33:17.745856Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-20T03:34:59.745856Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-20T03:38:54.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-27623c"}
+{"timestamp": "2026-10-20T03:47:53.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-1e1220"}
+{"timestamp": "2026-10-20T03:56:21.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-15176b"}
+{"timestamp": "2026-10-20T04:15:06.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-2c68e4"}
+{"timestamp": "2026-10-20T04:17:55.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-ee03ef"}
+{"timestamp": "2026-10-20T04:31:58.745856Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-cbed74"}
+{"timestamp": "2026-10-20T04:32:00.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-7f0fc6"}
+{"timestamp": "2026-10-20T04:32:21.745856Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-8c7288"}
+{"timestamp": "2026-10-20T04:59:52.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Out of memory: worker killed", "request_id": "req-973bfa"}
+{"timestamp": "2026-10-20T05:25:13.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-90e534"}
+{"timestamp": "2026-10-20T05:32:09.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-8ee978"}
+{"timestamp": "2026-10-20T05:58:22.745856Z", "severity": "INFO", "service": "auth-service", "message": "Request completed"}
+{"timestamp": "2026-10-20T05:59:23.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
+{"timestamp": "2026-10-20T06:06:27.745856Z", "severity": "INFO", "service": "payment-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T06:21:30.745856Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-94326a"}
+{"timestamp": "2026-10-20T06:25:46.745856Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-1c7c4b"}
+{"timestamp": "2026-10-20T06:55:04.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Out of memory: worker killed"}
+{"timestamp": "2026-10-20T06:55:07.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-8d7313"}
+{"timestamp": "2026-10-20T07:03:17.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-8b11f8"}
+{"timestamp": "2026-10-20T07:09:05.745856Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-b7cc25"}
+{"timestamp": "2026-10-20T07:17:37.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T07:31:29.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-0353ce"}
+{"timestamp": "2026-10-20T07:36:32.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-bcf03f"}
+{"timestamp": "2026-10-20T07:48:00.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Out of memory: worker killed", "request_id": "req-7e9bea"}
+{"timestamp": "2026-10-20T07:50:05.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-75d199"}
+{"timestamp": "2026-10-20T07:52:54.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-1d80e2"}
+{"timestamp": "2026-10-20T08:02:16.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-3375af"}
+{"timestamp": "2026-10-20T08:04:04.745856Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-c29fe7"}
+{"timestamp": "2026-10-20T08:08:37.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T08:12:13.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-17d6f8"}
+{"timestamp": "2026-10-20T08:18:45.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-20e29a"}
+{"timestamp": "2026-10-20T08:19:42.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-e876cb"}
+{"timestamp": "2026-10-20T08:22:48.745856Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client", "request_id": "req-04cfbd"}
+{"timestamp": "2026-10-20T08:29:57.745856Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-a7f070"}
+{"timestamp": "2026-10-20T08:30:44.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-635616"}
+{"timestamp": "2026-10-20T08:39:26.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-20T08:40:38.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T08:48:13.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T09:04:32.745856Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-48211d"}
+{"timestamp": "2026-10-20T09:09:25.745856Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed", "request_id": "req-e64a75"}
+{"timestamp": "2026-10-20T09:15:16.745856Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined"}
+{"timestamp": "2026-10-20T09:17:37.745856Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)"}
+{"timestamp": "2026-10-20T09:32:54.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-cc9ab2"}
+{"timestamp": "2026-10-20T09:33:04.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-20T09:38:56.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-c62335"}
+{"timestamp": "2026-10-20T09:43:16.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-9b0bd3"}
+{"timestamp": "2026-10-20T09:43:22.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-142f32"}
+{"timestamp": "2026-10-20T09:45:31.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-16928a"}
+{"timestamp": "2026-10-20T09:51:06.745856Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-0096df"}
+{"timestamp": "2026-10-20T10:00:06.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-173039"}
+{"timestamp": "2026-10-20T10:12:38.745856Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-b4506f"}
+{"timestamp": "2026-10-20T10:18:48.745856Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-712b12"}
+{"timestamp": "2026-10-20T10:25:00.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Retrying upstream call (attempt 2)", "request_id": "req-acccdf"}
+{"timestamp": "2026-10-20T10:31:06.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Out of memory: worker killed", "request_id": "req-ee4840"}
+{"timestamp": "2026-10-20T10:43:51.745856Z", "severity": "INFO", "service": "user-service", "message": "Health check passed"}
+{"timestamp": "2026-10-20T10:47:46.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-208aad"}
+{"timestamp": "2026-10-20T10:48:51.745856Z", "severity": "WARN", "service": "payment-service", "message": "Deprecated API version used by client", "request_id": "req-25245f"}
+{"timestamp": "2026-10-20T10:54:03.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-13d3b6"}
+{"timestamp": "2026-10-20T10:56:19.745856Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-eb01c0"}
+{"timestamp": "2026-10-20T10:58:08.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T11:20:12.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-2ef514"}
+{"timestamp": "2026-10-20T11:29:55.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Unhandled exception in request handler", "request_id": "req-96fcd6"}
+{"timestamp": "2026-10-20T11:32:41.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
+{"timestamp": "2026-10-20T11:33:42.745856Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T11:42:51.745856Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-20T11:47:01.745856Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-c20ae2"}
+{"timestamp": "2026-10-20T12:16:49.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-20T12:25:44.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-ca0028"}
+{"timestamp": "2026-10-20T12:27:36.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-a10864"}
+{"timestamp": "2026-10-20T12:33:16.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-57ffc2"}
+{"timestamp": "2026-10-20T12:58:04.745856Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed"}
+{"timestamp": "2026-10-20T13:07:52.745856Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)"}
+{"timestamp": "2026-10-20T13:20:59.745856Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms"}
+{"timestamp": "2026-10-20T13:21:16.745856Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-59ab0e"}
+{"timestamp": "2026-10-20T13:33:00.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-3c10de"}
+{"timestamp": "2026-10-20T13:42:35.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-20T13:48:49.745856Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-20T13:58:06.745856Z", "severity": "WARN", "service": "auth-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-434868"}
+{"timestamp": "2026-10-20T14:00:57.745856Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-2fd911"}
+{"timestamp": "2026-10-20T14:04:33.745856Z", "severity": "WARN", "service": "user-service", "message": "Slow query detected (2.3s)"}
+{"timestamp": "2026-10-20T14:09:55.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-20T14:14:03.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-42f3c7"}
+{"timestamp": "2026-10-20T14:21:03.745856Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-fb654f"}
+{"timestamp": "2026-10-20T14:33:32.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-8c02a0"}
+{"timestamp": "2026-10-20T14:58:05.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-286053"}
+{"timestamp": "2026-10-20T15:05:34.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-4a881f"}
+{"timestamp": "2026-10-20T15:21:04.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Upstream service returned 502", "request_id": "req-555276"}
+{"timestamp": "2026-10-20T15:21:57.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-59f4ab"}
+{"timestamp": "2026-10-20T15:31:26.745856Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)"}
+{"timestamp": "2026-10-20T15:33:08.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-5f557c"}
+{"timestamp": "2026-10-20T15:43:26.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-20T15:44:50.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-9ed6b1"}
+{"timestamp": "2026-10-20T15:45:29.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-20T15:55:42.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed"}
+{"timestamp": "2026-10-20T15:56:56.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-41586e"}
+{"timestamp": "2026-10-20T15:58:06.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T16:09:38.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-888f9d"}
+{"timestamp": "2026-10-20T16:26:26.745856Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-fa20d8"}
+{"timestamp": "2026-10-20T16:35:33.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-2bf529"}
+{"timestamp": "2026-10-20T16:53:12.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-e059ba"}
+{"timestamp": "2026-10-20T16:56:02.745856Z", "severity": "INFO", "service": "payment-service", "message": "User login successful"}
+{"timestamp": "2026-10-20T17:02:32.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-0e21a8"}
+{"timestamp": "2026-10-20T17:09:50.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T17:20:34.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-248ede"}
+{"timestamp": "2026-10-20T17:28:00.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42", "request_id": "req-bc6d02"}
+{"timestamp": "2026-10-20T17:40:52.745856Z", "severity": "INFO", "service": "auth-service", "message": "User login successful"}
+{"timestamp": "2026-10-20T17:44:17.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-e3b46b"}
+{"timestamp": "2026-10-20T17:46:08.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-641ee5"}
+{"timestamp": "2026-10-20T17:58:15.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-ad3e75"}
+{"timestamp": "2026-10-20T17:59:40.745856Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-3fcee3"}
+{"timestamp": "2026-10-20T18:03:08.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-5c1f6b"}
+{"timestamp": "2026-10-20T18:14:11.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-e8f2f6"}
+{"timestamp": "2026-10-20T18:15:29.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-c384c8"}
+{"timestamp": "2026-10-20T18:27:14.745856Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-b9b1fc"}
+{"timestamp": "2026-10-20T18:44:24.745856Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-44173d"}
+{"timestamp": "2026-10-20T18:53:08.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-20T19:06:13.745856Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-a60862"}
+{"timestamp": "2026-10-20T19:29:07.745856Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-b7c97e"}
+{"timestamp": "2026-10-20T19:54:08.745856Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-f92cfe"}
+{"timestamp": "2026-10-20T20:06:28.745856Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-18e9b8"}
+{"timestamp": "2026-10-20T20:17:10.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-a8b9b1"}
+{"timestamp": "2026-10-20T20:17:29.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
+{"timestamp": "2026-10-20T20:30:26.745856Z", "severity": "WARN", "service": "billing-service", "message": "Slow query detected (2.3s)", "request_id": "req-a00316"}
+{"timestamp": "2026-10-20T20:31:35.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-7eed7c"}
+{"timestamp": "2026-10-20T20:39:38.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-7f0007"}
+{"timestamp": "2026-10-20T20:40:32.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)"}
+{"timestamp": "2026-10-20T20:46:28.745856Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
+{"timestamp": "2026-10-20T21:02:32.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-a4fdd9"}
+{"timestamp": "2026-10-20T21:37:57.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-20T21:40:57.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-20T21:44:14.745856Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-498ef1"}
+{"timestamp": "2026-10-20T21:44:54.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-0a0017"}
+{"timestamp": "2026-10-20T22:19:31.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-1ed9d3"}
+{"timestamp": "2026-10-20T22:46:08.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-146d19"}
+{"timestamp": "2026-10-20T22:46:41.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-9de925"}
+{"timestamp": "2026-10-20T22:47:22.745856Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-e83102"}
+{"timestamp": "2026-10-20T22:51:20.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-34e2cf"}
+{"timestamp": "2026-10-20T23:02:27.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-def82b"}
+{"timestamp": "2026-10-20T23:07:53.745856Z", "severity": "INFO", "service": "user-service", "message": "Request completed", "request_id": "req-86daed"}
+{"timestamp": "2026-10-20T23:11:25.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-2c5f14"}
+{"timestamp": "2026-10-20T23:15:00.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-20T23:17:26.745856Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-c5f64d"}
+{"timestamp": "2026-10-20T23:18:02.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-cb1ca9"}
+{"timestamp": "2026-10-20T23:24:00.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-d17b01"}
+{"timestamp": "2026-10-20T23:30:11.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-20T23:31:43.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-45b21b"}
+{"timestamp": "2026-10-20T23:38:18.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-d93f05"}
+{"timestamp": "2026-10-20T23:46:49.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed", "request_id": "req-178c20"}
+{"timestamp": "2026-10-20T23:56:00.745856Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-4d2e70"}
+{"timestamp": "2026-10-21T00:08:20.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-4c8dd5"}
+{"timestamp": "2026-10-21T00:10:22.745856Z", "severity": "ERROR", "service": "user-service", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-d62b82"}
+{"timestamp": "2026-10-21T00:13:16.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-4d3da9"}
+{"timestamp": "2026-10-21T00:29:26.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-1d8fac"}
+{"timestamp": "2026-10-21T00:30:40.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-6e1780"}
+{"timestamp": "2026-10-21T00:42:40.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-a274e0"}
+{"timestamp": "2026-10-21T00:44:05.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-45e46b"}
+{"timestamp": "2026-10-21T00:48:47.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-21T00:49:35.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-da4089"}
+{"timestamp": "2026-10-21T00:56:40.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler", "request_id": "req-627072"}
+{"timestamp": "2026-10-21T01:04:27.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-956ee0"}
+{"timestamp": "2026-10-21T01:09:37.745856Z", "severity": "INFO", "service": "auth-service", "message": "Cache warmed", "request_id": "req-322117"}
+{"timestamp": "2026-10-21T01:19:55.745856Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-56e1ca"}
+{"timestamp": "2026-10-21T01:24:22.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-a3f59d"}
+{"timestamp": "2026-10-21T01:25:26.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-fe9b21"}
+{"timestamp": "2026-10-21T01:28:49.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()"}
+{"timestamp": "2026-10-21T01:43:10.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()", "request_id": "req-b32e00"}
+{"timestamp": "2026-10-21T01:56:04.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-b42082"}
+{"timestamp": "2026-10-21T01:57:23.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-83325f"}
+{"timestamp": "2026-10-21T02:04:16.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Token refresh rejected: replay attack suspected"}
+{"timestamp": "2026-10-21T02:09:07.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-e76d41"}
+{"timestamp": "2026-10-21T02:14:22.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Brute force threshold exceeded from IP 192.168.1.105", "request_id": "req-1e4a8e"}
+{"timestamp": "2026-10-21T02:19:54.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Retrying upstream call (attempt 2)", "request_id": "req-8144d8"}
+{"timestamp": "2026-10-21T03:01:28.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-c7184a"}
+{"timestamp": "2026-10-21T03:06:21.745856Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-21T03:11:50.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-dd1b2c"}
+{"timestamp": "2026-10-21T03:32:29.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-e16fd0"}
+{"timestamp": "2026-10-21T03:44:19.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-cfeb5c"}
+{"timestamp": "2026-10-21T03:47:28.745856Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
+{"timestamp": "2026-10-21T03:49:32.745856Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-21T03:53:14.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()"}
+{"timestamp": "2026-10-21T04:05:35.745856Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-46dc2c"}
+{"timestamp": "2026-10-21T04:09:40.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-9a6f4a"}
+{"timestamp": "2026-10-21T04:11:29.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-3cd4cc"}
+{"timestamp": "2026-10-21T04:17:56.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-21T04:18:56.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-360930"}
+{"timestamp": "2026-10-21T04:26:29.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-4318dc"}
+{"timestamp": "2026-10-21T04:31:39.745856Z", "severity": "INFO", "service": "user-service", "message": "Cache warmed", "request_id": "req-7cca4c"}
+{"timestamp": "2026-10-21T05:37:30.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-d32512"}
+{"timestamp": "2026-10-21T05:44:20.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-21T05:45:09.745856Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)"}
+{"timestamp": "2026-10-21T05:58:54.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-0ba3f6"}
+{"timestamp": "2026-10-21T06:00:06.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-3aa686"}
+{"timestamp": "2026-10-21T06:12:25.745856Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-4f6c11"}
+{"timestamp": "2026-10-21T06:13:38.745856Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-92c8d7"}
+{"timestamp": "2026-10-21T06:31:10.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-b92839"}
+{"timestamp": "2026-10-21T06:31:26.745856Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-21T06:37:19.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed"}
+{"timestamp": "2026-10-21T06:44:56.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-21T07:03:35.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()"}
+{"timestamp": "2026-10-21T07:13:56.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-ede30d"}
+{"timestamp": "2026-10-21T07:26:07.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-21T07:32:53.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-f38ee7"}
+{"timestamp": "2026-10-21T07:39:43.745856Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-7a44b8"}
+{"timestamp": "2026-10-21T07:41:11.745856Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-3a1793"}
+{"timestamp": "2026-10-21T07:48:55.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Token refresh rejected: replay attack suspected"}
+{"timestamp": "2026-10-21T07:51:11.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Entering processOrder()", "request_id": "req-521475"}
+{"timestamp": "2026-10-21T07:56:39.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
+{"timestamp": "2026-10-21T08:05:34.745856Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-cd829b"}
+{"timestamp": "2026-10-21T08:09:47.745856Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client", "request_id": "req-cab9ca"}
+{"timestamp": "2026-10-21T08:20:29.745856Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d6cb4d"}
+{"timestamp": "2026-10-21T08:25:28.745856Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-c6dedc"}
+{"timestamp": "2026-10-21T08:33:15.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-4cb973"}
+{"timestamp": "2026-10-21T08:36:53.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-29469e"}
+{"timestamp": "2026-10-21T08:57:48.745856Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-acd539"}
+{"timestamp": "2026-10-21T09:06:35.745856Z", "severity": "WARN", "service": "payment-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-21T09:15:52.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-8eb06c"}
+{"timestamp": "2026-10-21T09:19:45.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
+{"timestamp": "2026-10-21T09:23:53.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-d5dbfb"}
+{"timestamp": "2026-10-21T09:24:03.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-21T09:29:24.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-9b9054"}
+{"timestamp": "2026-10-21T09:30:51.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
+{"timestamp": "2026-10-21T09:37:42.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-a1fb3a"}
+{"timestamp": "2026-10-21T09:57:49.745856Z", "severity": "WARN", "service": "payment-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-c2a84e"}
+{"timestamp": "2026-10-21T10:02:20.745856Z", "severity": "WARN", "service": "billing-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-21T10:14:29.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms"}
+{"timestamp": "2026-10-21T10:19:18.745856Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-1e24b3"}
+{"timestamp": "2026-10-21T10:35:16.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-3dfaed"}
+{"timestamp": "2026-10-21T10:54:07.745856Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-efa43c"}
+{"timestamp": "2026-10-21T10:56:18.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)", "request_id": "req-1a4b39"}
+{"timestamp": "2026-10-21T10:57:46.745856Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)"}
+{"timestamp": "2026-10-21T11:01:13.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-0d3e29"}
+{"timestamp": "2026-10-21T11:20:17.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
+{"timestamp": "2026-10-21T11:20:31.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-28feca"}
+{"timestamp": "2026-10-21T11:40:40.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms"}
+{"timestamp": "2026-10-21T11:49:06.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-9e333d"}
+{"timestamp": "2026-10-21T11:49:42.745856Z", "severity": "CRITICAL", "service": "payment-service", "message": "Disk quota exceeded on volume /data"}
+{"timestamp": "2026-10-21T12:01:41.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed"}
+{"timestamp": "2026-10-21T12:12:50.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-4ef28d"}
+{"timestamp": "2026-10-21T12:15:22.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Upstream service returned 502", "request_id": "req-1500ed"}
+{"timestamp": "2026-10-21T12:21:53.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-facd2e"}
+{"timestamp": "2026-10-21T13:00:49.745856Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-43142a"}
+{"timestamp": "2026-10-21T13:03:22.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-c326b3"}
+{"timestamp": "2026-10-21T13:54:38.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Webhook receiver down: Stripe event delivery stalled"}
+{"timestamp": "2026-10-21T13:55:15.745856Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)", "request_id": "req-f054cb"}
+{"timestamp": "2026-10-21T14:02:03.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-21T14:26:00.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-15c958"}
+{"timestamp": "2026-10-21T14:30:21.745856Z", "severity": "WARN", "service": "user-service", "message": "Slow query detected (2.3s)"}
+{"timestamp": "2026-10-21T14:30:53.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Out of memory: worker killed", "request_id": "req-5c4b6b"}
+{"timestamp": "2026-10-21T14:37:55.745856Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful"}
+{"timestamp": "2026-10-21T14:44:56.745856Z", "severity": "WARN", "service": "auth-service", "message": "Retrying upstream call (attempt 2)"}
+{"timestamp": "2026-10-21T14:47:32.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-f9d440"}
+{"timestamp": "2026-10-21T14:53:11.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-0f81a2"}
+{"timestamp": "2026-10-21T15:03:42.745856Z", "severity": "INFO", "service": "auth-service", "message": "User login successful", "request_id": "req-c93efb"}
+{"timestamp": "2026-10-21T15:04:34.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-f3b6f0"}
+{"timestamp": "2026-10-21T15:14:43.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "TLS handshake completed (TLS 1.3)"}
+{"timestamp": "2026-10-21T15:21:43.745856Z", "severity": "ERROR", "service": "user-service", "message": "Failed to charge card: card declined", "request_id": "req-ff3a7c"}
+{"timestamp": "2026-10-21T15:26:06.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-25dec2"}
+{"timestamp": "2026-10-21T15:26:55.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-21T15:32:48.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Slow query detected (2.3s)"}
+{"timestamp": "2026-10-21T15:41:40.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-58ab5d"}
+{"timestamp": "2026-10-21T15:53:29.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-9a161a"}
+{"timestamp": "2026-10-21T15:54:16.745856Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful", "request_id": "req-f2d33d"}
+{"timestamp": "2026-10-21T16:07:50.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-21T16:14:54.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout"}
+{"timestamp": "2026-10-21T16:15:41.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-d88b2d"}
+{"timestamp": "2026-10-21T16:16:13.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42", "request_id": "req-fdae1d"}
+{"timestamp": "2026-10-21T16:28:39.745856Z", "severity": "WARN", "service": "payment-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-21T16:46:22.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-21T16:54:30.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-21T17:06:48.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-21T17:06:48.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Upstream service returned 502", "request_id": "req-6b5708"}
+{"timestamp": "2026-10-21T17:25:52.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-970f2b"}
+{"timestamp": "2026-10-21T17:25:58.745856Z", "severity": "DEBUG", "service": "user-service", "message": "TLS handshake completed (TLS 1.3)"}
+{"timestamp": "2026-10-21T17:41:59.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-21T17:44:23.745856Z", "severity": "INFO", "service": "user-service", "message": "Health check passed"}
+{"timestamp": "2026-10-21T17:45:12.745856Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-f17645"}
+{"timestamp": "2026-10-21T17:55:27.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-799d8e"}
+{"timestamp": "2026-10-21T18:10:47.745856Z", "severity": "WARN", "service": "user-service", "message": "Rate limit warning: 85% capacity reached"}
+{"timestamp": "2026-10-21T18:39:11.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-3dc69b"}
+{"timestamp": "2026-10-21T19:00:00.745856Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-51472e"}
+{"timestamp": "2026-10-21T19:04:53.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-381e17"}
+{"timestamp": "2026-10-21T19:36:48.745856Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client"}
+{"timestamp": "2026-10-21T19:47:44.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed"}
+{"timestamp": "2026-10-21T19:53:01.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-a70172"}
+{"timestamp": "2026-10-21T19:54:25.745856Z", "severity": "WARN", "service": "user-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-f3c279"}
+{"timestamp": "2026-10-21T19:59:42.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed", "request_id": "req-5ecbf5"}
+{"timestamp": "2026-10-21T20:15:15.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Failed to charge card: card declined", "request_id": "req-56c8ee"}
+{"timestamp": "2026-10-21T20:29:58.745856Z", "severity": "INFO", "service": "auth-service", "message": "User login successful"}
+{"timestamp": "2026-10-21T21:26:51.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-394788"}
+{"timestamp": "2026-10-21T21:26:56.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-d5cccb"}
+{"timestamp": "2026-10-21T21:28:15.745856Z", "severity": "INFO", "service": "payment-service", "message": "User login successful"}
+{"timestamp": "2026-10-21T21:32:02.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-21T21:42:01.745856Z", "severity": "WARN", "service": "billing-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-4de0bf"}
+{"timestamp": "2026-10-21T21:51:31.745856Z", "severity": "WARN", "service": "payment-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-cb135b"}
+{"timestamp": "2026-10-21T21:53:26.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Entering processOrder()", "request_id": "req-35136e"}
+{"timestamp": "2026-10-21T21:55:16.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Token refresh rejected: replay attack suspected", "request_id": "req-6fd3a5"}
+{"timestamp": "2026-10-21T21:56:19.745856Z", "severity": "INFO", "service": "auth-service", "message": "Request completed", "request_id": "req-509b05"}
+{"timestamp": "2026-10-21T22:00:36.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502", "request_id": "req-ce1598"}
+{"timestamp": "2026-10-21T22:30:25.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "SQL query executed in 12ms", "request_id": "req-d82559"}
+{"timestamp": "2026-10-21T22:43:38.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-4f9b02"}
+{"timestamp": "2026-10-21T22:51:45.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-21T22:54:13.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-29ef9d"}
+{"timestamp": "2026-10-21T22:56:58.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-29eae7"}
+{"timestamp": "2026-10-21T23:00:48.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-299167"}
+{"timestamp": "2026-10-21T23:09:39.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Disk quota exceeded on volume /data", "request_id": "req-e26be4"}
+{"timestamp": "2026-10-21T23:18:59.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-3aa40d"}
+{"timestamp": "2026-10-21T23:28:03.745856Z", "severity": "INFO", "service": "billing-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d739ae"}
+{"timestamp": "2026-10-21T23:37:40.745856Z", "severity": "INFO", "service": "billing-service", "message": "User login successful", "request_id": "req-fa5e9c"}
+{"timestamp": "2026-10-21T23:39:06.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Failed to charge card: card declined"}
+{"timestamp": "2026-10-21T23:44:59.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-a57b8c"}
+{"timestamp": "2026-10-21T23:57:25.745856Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-db8f95"}
+{"timestamp": "2026-10-22T00:06:35.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed", "request_id": "req-9fb8dc"}
+{"timestamp": "2026-10-22T00:12:23.745856Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-634758"}
+{"timestamp": "2026-10-22T00:41:35.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-22T00:54:00.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8055bf"}
+{"timestamp": "2026-10-22T01:04:46.745856Z", "severity": "INFO", "service": "auth-service", "message": "Health check passed", "request_id": "req-cbe405"}
+{"timestamp": "2026-10-22T01:16:04.745856Z", "severity": "INFO", "service": "inventory-service", "message": "User login successful"}
+{"timestamp": "2026-10-22T01:27:08.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-234e4c"}
+{"timestamp": "2026-10-22T01:27:35.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-25fc51"}
+{"timestamp": "2026-10-22T01:35:07.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed"}
+{"timestamp": "2026-10-22T01:37:07.745856Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-437bb6"}
+{"timestamp": "2026-10-22T01:48:38.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "TLS handshake completed (TLS 1.3)"}
+{"timestamp": "2026-10-22T01:49:23.745856Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-22T02:01:34.745856Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-3e22b6"}
+{"timestamp": "2026-10-22T02:35:02.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Request completed", "request_id": "req-a8c75b"}
+{"timestamp": "2026-10-22T02:50:55.745856Z", "severity": "ERROR", "service": "user-service", "message": "Upstream service returned 502"}
+{"timestamp": "2026-10-22T03:03:54.745856Z", "severity": "INFO", "service": "payment-service", "message": "Health check passed"}
+{"timestamp": "2026-10-22T03:13:24.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-fab223"}
+{"timestamp": "2026-10-22T03:33:52.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Entering processOrder()", "request_id": "req-8780fa"}
+{"timestamp": "2026-10-22T03:53:53.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Failed to charge card: card declined", "request_id": "req-4b8c38"}
+{"timestamp": "2026-10-22T03:54:51.745856Z", "severity": "CRITICAL", "service": "user-service", "message": "Upstream service returned 502", "request_id": "req-191c53"}
+{"timestamp": "2026-10-22T04:00:46.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms", "request_id": "req-52ed55"}
+{"timestamp": "2026-10-22T04:02:06.745856Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-2e3b57"}
+{"timestamp": "2026-10-22T04:11:03.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Upstream service returned 502", "request_id": "req-99482b"}
+{"timestamp": "2026-10-22T04:21:47.745856Z", "severity": "WARN", "service": "user-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-943503"}
+{"timestamp": "2026-10-22T04:34:47.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Disk quota exceeded on volume /data"}
+{"timestamp": "2026-10-22T04:37:47.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Webhook receiver down: Stripe event delivery stalled", "request_id": "req-8c9809"}
+{"timestamp": "2026-10-22T04:45:40.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-52b68e"}
+{"timestamp": "2026-10-22T04:50:50.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Entering processOrder()", "request_id": "req-cd6578"}
+{"timestamp": "2026-10-22T04:57:58.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-28446e"}
+{"timestamp": "2026-10-22T05:09:32.745856Z", "severity": "INFO", "service": "auth-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-6186ce"}
+{"timestamp": "2026-10-22T05:11:07.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-eb39bc"}
+{"timestamp": "2026-10-22T05:16:15.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout"}
+{"timestamp": "2026-10-22T05:37:08.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-70ea72"}
+{"timestamp": "2026-10-22T05:51:29.745856Z", "severity": "ERROR", "service": "user-service", "message": "Unhandled exception in request handler", "request_id": "req-c7ac54"}
+{"timestamp": "2026-10-22T05:59:37.745856Z", "severity": "WARN", "service": "payment-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-ebacdd"}
+{"timestamp": "2026-10-22T06:22:00.745856Z", "severity": "WARN", "service": "auth-service", "message": "Deprecated API version used by client", "request_id": "req-2b5dbc"}
+{"timestamp": "2026-10-22T06:23:21.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-88cada"}
+{"timestamp": "2026-10-22T06:24:19.745856Z", "severity": "CRITICAL", "service": "api-gateway", "message": "Database connection timeout", "request_id": "req-9b0b47"}
+{"timestamp": "2026-10-22T06:28:44.745856Z", "severity": "INFO", "service": "user-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-aa3591"}
+{"timestamp": "2026-10-22T06:41:07.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "Cache hit for key user:42", "request_id": "req-6cec19"}
+{"timestamp": "2026-10-22T06:49:37.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-1d5e09"}
+{"timestamp": "2026-10-22T06:59:51.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Failed to charge card: card declined", "request_id": "req-932357"}
+{"timestamp": "2026-10-22T07:01:45.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-a66ce4"}
+{"timestamp": "2026-10-22T07:02:34.745856Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-be0f83"}
+{"timestamp": "2026-10-22T07:04:00.745856Z", "severity": "WARN", "service": "auth-service", "message": "Rate limit warning: 85% capacity reached", "request_id": "req-81de72"}
+{"timestamp": "2026-10-22T07:05:16.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-aa7a4c"}
+{"timestamp": "2026-10-22T07:16:47.745856Z", "severity": "INFO", "service": "billing-service", "message": "Processing invoice #INV-2026-901"}
+{"timestamp": "2026-10-22T07:18:54.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-36f01d"}
+{"timestamp": "2026-10-22T07:24:26.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-4063ae"}
+{"timestamp": "2026-10-22T07:51:41.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-f51397"}
+{"timestamp": "2026-10-22T08:04:51.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-d697c8"}
+{"timestamp": "2026-10-22T08:13:36.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Cache warmed", "request_id": "req-39acd6"}
+{"timestamp": "2026-10-22T08:22:39.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-592274"}
+{"timestamp": "2026-10-22T08:30:31.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-c93157"}
+{"timestamp": "2026-10-22T08:48:19.745856Z", "severity": "INFO", "service": "billing-service", "message": "Cache warmed", "request_id": "req-7e9634"}
+{"timestamp": "2026-10-22T08:51:00.745856Z", "severity": "ERROR", "service": "user-service", "message": "Database connection timeout", "request_id": "req-2e8bad"}
+{"timestamp": "2026-10-22T08:55:45.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Session token near expiration (expires in 120s)"}
+{"timestamp": "2026-10-22T08:55:49.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms"}
+{"timestamp": "2026-10-22T09:26:24.745856Z", "severity": "INFO", "service": "api-gateway", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-4b9e00"}
+{"timestamp": "2026-10-22T09:35:12.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "SQL query executed in 12ms", "request_id": "req-1318c1"}
+{"timestamp": "2026-10-22T09:46:54.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Unhandled exception in request handler", "request_id": "req-75d213"}
+{"timestamp": "2026-10-22T09:58:19.745856Z", "severity": "INFO", "service": "user-service", "message": "User login successful", "request_id": "req-129b22"}
+{"timestamp": "2026-10-22T09:59:41.745856Z", "severity": "ERROR", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-6ddc2c"}
+{"timestamp": "2026-10-22T10:01:54.745856Z", "severity": "WARN", "service": "api-gateway", "message": "Deprecated API version used by client", "request_id": "req-efc921"}
+{"timestamp": "2026-10-22T10:03:08.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Health check passed", "request_id": "req-714ad6"}
+{"timestamp": "2026-10-22T10:06:36.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Health check passed", "request_id": "req-c2e618"}
+{"timestamp": "2026-10-22T10:07:10.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Upstream service returned 502", "request_id": "req-9ab8ab"}
+{"timestamp": "2026-10-22T10:10:44.745856Z", "severity": "INFO", "service": "payment-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-fbc37b"}
+{"timestamp": "2026-10-22T10:12:09.745856Z", "severity": "ERROR", "service": "api-gateway", "message": "Unhandled exception in request handler"}
+{"timestamp": "2026-10-22T10:16:31.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-f02f33"}
+{"timestamp": "2026-10-22T10:32:59.745856Z", "severity": "DEBUG", "service": "auth-service", "message": "Cache hit for key user:42", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-22T10:34:37.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Request completed"}
+{"timestamp": "2026-10-22T10:46:04.745856Z", "severity": "DEBUG", "service": "billing-service", "message": "Cache hit for key user:42", "request_id": "req-10d880"}
+{"timestamp": "2026-10-22T10:53:05.745856Z", "severity": "INFO", "service": "payment-service", "message": "User login successful", "request_id": "req-0cb0cc"}
+{"timestamp": "2026-10-22T11:01:25.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-0ec7f9"}
+{"timestamp": "2026-10-22T11:04:50.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed", "request_id": "req-fce216"}
+{"timestamp": "2026-10-22T11:06:40.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "SQL query executed in 12ms", "request_id": "req-c73f88"}
+{"timestamp": "2026-10-22T11:07:39.745856Z", "severity": "INFO", "service": "api-gateway", "message": "User login successful"}
+{"timestamp": "2026-10-22T11:19:16.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-36cd6b"}
+{"timestamp": "2026-10-22T11:27:59.745856Z", "severity": "ERROR", "service": "billing-service", "message": "Database connection timeout", "request_id": "req-ef0264"}
+{"timestamp": "2026-10-22T11:31:37.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-5c2683"}
+{"timestamp": "2026-10-22T11:32:09.745856Z", "severity": "INFO", "service": "payment-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-7a350b"}
+{"timestamp": "2026-10-22T11:59:56.745856Z", "severity": "WARN", "service": "auth-service", "message": "Slow query detected (2.3s)", "request_id": "req-25ee19"}
+{"timestamp": "2026-10-22T12:06:58.745856Z", "severity": "INFO", "service": "inventory-service", "message": "Processing invoice #INV-2026-901", "request_id": "req-292fac"}
+{"timestamp": "2026-10-22T12:23:18.745856Z", "severity": "INFO", "service": "user-service", "message": "Health check passed", "request_id": "req-d46d5e"}
+{"timestamp": "2026-10-22T12:39:09.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Session token near expiration (expires in 120s)", "request_id": "req-e44ec9"}
+{"timestamp": "2026-10-22T12:44:05.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Cache warmed"}
+{"timestamp": "2026-10-22T12:47:42.745856Z", "severity": "INFO", "service": "billing-service", "message": "Health check passed"}
+{"timestamp": "2026-10-22T12:56:36.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-05dae7"}
+{"timestamp": "2026-10-22T13:02:11.745856Z", "severity": "DEBUG", "service": "api-gateway", "message": "TLS handshake completed (TLS 1.3)", "request_id": "req-f549e0"}
+{"timestamp": "2026-10-22T13:11:02.745856Z", "severity": "INFO", "service": "api-gateway", "message": "Processing invoice #INV-2026-901", "request_id": "req-9860ef"}
+{"timestamp": "2026-10-22T13:12:43.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Entering processOrder()", "request_id": "req-afd713"}
+{"timestamp": "2026-10-22T13:35:18.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "SQL query executed in 12ms", "request_id": "req-cb7984"}
+{"timestamp": "2026-10-22T13:41:43.745856Z", "severity": "INFO", "service": "inventory-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-9f9947"}
+{"timestamp": "2026-10-22T13:52:25.745856Z", "severity": "INFO", "service": "user-service", "message": "Request completed"}
+{"timestamp": "2026-10-22T13:54:25.745856Z", "severity": "CRITICAL", "service": "auth-service", "message": "Database connection timeout", "request_id": "req-8f3k2"}
+{"timestamp": "2026-10-22T13:56:17.745856Z", "severity": "CRITICAL", "service": "billing-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-2b604a"}
+{"timestamp": "2026-10-22T13:56:35.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-c92ecb"}
+{"timestamp": "2026-10-22T14:01:38.745856Z", "severity": "INFO", "service": "auth-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-e6ae83"}
+{"timestamp": "2026-10-22T14:02:14.745856Z", "severity": "DEBUG", "service": "user-service", "message": "Cache hit for key user:42", "request_id": "req-a461bf"}
+{"timestamp": "2026-10-22T14:04:33.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-e5d9e2"}
+{"timestamp": "2026-10-22T14:14:36.745856Z", "severity": "ERROR", "service": "payment-service", "message": "Database connection timeout", "request_id": "req-98cdc1"}
+{"timestamp": "2026-10-22T14:16:45.745856Z", "severity": "INFO", "service": "billing-service", "message": "Request completed", "request_id": "req-b0643d"}
+{"timestamp": "2026-10-22T14:20:06.745856Z", "severity": "CRITICAL", "service": "inventory-service", "message": "Disk quota exceeded on volume /data", "request_id": "req-070056"}
+{"timestamp": "2026-10-22T14:43:27.745856Z", "severity": "INFO", "service": "user-service", "message": "GET /api/v1/health 200 OK 2ms", "request_id": "req-d9274f"}
+{"timestamp": "2026-10-22T14:49:36.745856Z", "severity": "WARN", "service": "inventory-service", "message": "Deprecated API version used by client", "request_id": "req-0da4b2"}
+{"timestamp": "2026-10-22T14:52:16.745856Z", "severity": "DEBUG", "service": "payment-service", "message": "Cache hit for key user:42"}
+{"timestamp": "2026-10-22T14:53:12.745856Z", "severity": "ERROR", "service": "inventory-service", "message": "Database connection timeout", "request_id": "req-0de051"}
+{"timestamp": "2026-10-22T14:53:37.745856Z", "severity": "WARN", "service": "billing-service", "message": "Retrying upstream call (attempt 2)", "request_id": "req-204eb6"}
+{"timestamp": "2026-10-22T15:00:28.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "SQL query executed in 12ms"}
+{"timestamp": "2026-10-22T15:27:05.745856Z", "severity": "DEBUG", "service": "inventory-service", "message": "Cache hit for key user:42"}

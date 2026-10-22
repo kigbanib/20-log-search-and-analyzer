@@ -2,7 +2,7 @@
 
 > **One-liner:** Upload a JSONL log file → it gets parsed and stored → filter by severity → search by request ID → see which errors recur most often. One flow, done well and tested — the entire MVP.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-48_passed-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-73_passed-brightgreen) ![CI](https://github.com/kigbanib/20-log-search-and-analyzer/actions/workflows/ci.yml/badge.svg)
 
 **Live demo (local):** `http://localhost:8000` → dashboard at `/` + Swagger at `/docs` + explorer at `/explorer`  
 **Repo:** `kigbanib/20-log-search-and-analyzer` — integrated on `arena/d8852790…` (ready to PR to `develop`)
@@ -70,9 +70,22 @@ scripts/generate_logs.py + testdata/* + seed_demo_data.py → Role 5 QA/DevOps
 ```bash
 git clone https://github.com/kigbanib/20-log-search-and-analyzer.git
 cd 20-log-search-and-analyzer
-git checkout arena/d8852790-20-log-search-and-analyzer   # or develop after PR merge
+# work from your team's default branch (main) — the arena/* branch is already merged
+
+# create + activate a virtual environment (recommended)
+python -m venv .venv
+source .venv/bin/activate        # macOS / Linux
+# .venv\Scripts\Activate.ps1     # Windows PowerShell
+# .venv\Scripts\activate.bat     # Windows cmd
+
 pip install -r requirements.txt
 ```
+
+> **VS Code users:** after activating, open the folder in VS Code, then
+> `Ctrl+Shift+P` → **Python: Select Interpreter** → choose the one inside
+> `.venv`. `pytest` is then discoverable in the Testing panel, and
+> "Run Python File" works for `seed_demo_data.py`. No live-server extension
+> needed — FastAPI serves the dashboard for you.
 
 ### 2. Env vars
 ```bash
@@ -81,9 +94,14 @@ cp .env.example .env   # edit if needed
 # MAX_UPLOAD_MB=5
 # CORS_ORIGIN=*
 # PORT=8000
+# SEED_ON_START=1     ← optional but recommended: seeds 500 demo entries when DB is empty
 ```
 
 ### 3. Generate data & seed
+**Fastest path (skip everything else):** run the app with `SEED_ON_START=1` —
+it creates the tables *and* seeds `testdata/sample_valid.jsonl` (500 entries,
+5 severities, recurring errors) automatically on first start. The manual
+alternative:
 ```bash
 python scripts/generate_logs.py            # -> testdata/sample_valid.jsonl (500 lines)
 python scripts/generate_logs.py --all      # -> testdata/empty.log, malformed_30pct.*, unknown_severities.log, fake_image.log, sample_5.log
@@ -92,16 +110,18 @@ python seed_demo_data.py                   # seeds logs.db with 16 demo entries
 
 ### 4. Run
 ```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-# → http://localhost:8000        (dashboard)
+SEED_ON_START=1 uvicorn app.main:app --reload --port 8000
+# Windows PowerShell:  $env:SEED_ON_START=1; uvicorn app.main:app --reload --port 8000
+# Windows cmd:         set SEED_ON_START=1 && uvicorn app.main:app --reload --port 8000
+# → http://localhost:8000        (Sift dashboard — upload, filters, stats, streaks)
 # → http://localhost:8000/docs   (Swagger)
-# → http://localhost:8000/api/health
+# Buttons in the UI ("Simulate incident" / "Reset") work out of the box.
 ```
 
 ### 5. Test
 ```bash
-pytest -v                     # 48 backend tests (parser 12 + logs 13 + models 7 + integration 4 + upload 5 + analytics 3)
-node frontend/tests/api.test.js  # 15 frontend mock tests (happy + failure paths)
+pytest -v                     # 58 backend tests (parser 12 + logs 17 + models 7 + integration 4 + upload 5 + analytics 8 + demo 5)
+node frontend/tests/api.test.js  # 15 frontend mock tests (happy + failure paths) — Node only needed for this
 ```
 
 ---
@@ -198,6 +218,7 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 - No real-time tail — **Next:** polling/WebSocket for live logs
 - Frontend no build step — **Next:** Vite + proper bundling
 - `MAX_UPLOAD_MB` enforced in-process — **Next:** nginx limit + S3
+- Demo endpoints (`POST /api/demo/scenario/incident`, `/api/demo/reset`) are unauthenticated by design for the demo/competition (synthetic data only) — **Next:** remove or guard behind auth in production
 
 ---
 
@@ -213,7 +234,7 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 - **Libraries:** FastAPI, SQLAlchemy, Pydantic, Uvicorn, pytest, httpx, python-multipart (see `requirements.txt`)
 - **Borrowed:** `static/index.html` explorer from Role 2 draft, adapted
 - **AI/code-gen:** used for boilerplate docs/tests, all logic reviewed
-- **Env vars:** `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGIN`, `PORT`
+- **Env vars:** `DATABASE_URL`, `MAX_UPLOAD_MB`, `CORS_ORIGIN`, `PORT`, `SEED_ON_START` (optional demo seeding)
 
 ---
 
