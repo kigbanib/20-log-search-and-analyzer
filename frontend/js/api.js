@@ -20,9 +20,6 @@
 
   const delay = (ms) => new Promise((r) => setTimeout(r, ms));
   const clone = (o) => JSON.parse(JSON.stringify(o));
-  // Pristine dataset snapshot for mock-mode "Reset" (mock.js loads before this).
-  const baseline =
-    typeof window !== "undefined" && window.MOCK_DB ? window.MOCK_DB.entries.slice() : [];
 
   /* ---------------- real-mode transport ---------------- */
   async function http(path, options = {}) {
@@ -180,41 +177,6 @@
       return clone({ bucket, buckets });
     },
 
-    async demoScenario(name = "incident") {
-      await delay(600);
-      const db = window.MOCK_DB;
-      const hero = "req-inc7001";
-      const now = Date.now();
-      const story = [
-        [10, "INFO", "api-gateway", "POST /api/checkout received", hero],
-        [9, "WARN", "payment-service", "Retrying upstream call (attempt 2)", hero],
-        [8, "ERROR", "auth-service", "Database connection timeout", hero],
-        [7, "ERROR", "payment-service", "Database connection timeout", hero],
-        [6, "ERROR", "api-gateway", "Upstream service returned 502", hero],
-        [5, "ERROR", "payment-service", "Database connection timeout", "req-b-235"],
-        [4, "ERROR", "payment-service", "Database connection timeout", "req-b-239"],
-        [3, "ERROR", "payment-service", "Database connection timeout", "req-b-243"],
-        [2, "ERROR", "payment-service", "Database connection timeout", "req-b-247"],
-        [1, "ERROR", "payment-service", "Circuit breaker OPEN for db-primary", "req-b-251"],
-      ];
-      for (const [m, sev, svc, msg, rid] of story) {
-        db.entries.unshift({
-          id: db.nextId++,
-          timestamp: new Date(now - m * 60e3).toISOString(),
-          severity: sev, service: svc, request_id: rid, message: msg,
-        });
-      }
-      db.lastUpload = new Date().toISOString();
-      return clone({ scenario: name, inserted: story.length, hero_request_id: hero, story: "deploy → cascading timeouts" });
-    },
-
-    async demoReset() {
-      await delay(500);
-      window.MOCK_DB.entries = baseline.slice();
-      window.MOCK_DB.lastUpload = new Date().toISOString();
-      return clone({ reset: true, seeded: window.MOCK_DB.entries.length });
-    },
-
     async getStreaks(min = 3) {
       await delay(250);
       const BAD = new Set(["ERROR", "CRITICAL"]);
@@ -284,16 +246,6 @@
 
     getTimeline(bucket = "hour") {
       return USE_MOCK ? mock.getTimeline(bucket) : http("/api/stats/timeline?bucket=" + bucket);
-    },
-
-    demoScenario(name = "incident") {
-      return USE_MOCK
-        ? mock.demoScenario(name)
-        : http(`/api/demo/scenario/${name}`, { method: "POST" });
-    },
-
-    demoReset() {
-      return USE_MOCK ? mock.demoReset() : http("/api/demo/reset", { method: "POST" });
     },
 
     getStreaks(min = 3) {

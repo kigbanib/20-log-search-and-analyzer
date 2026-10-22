@@ -24,7 +24,6 @@
     prevBtn: $("prevBtn"), nextBtn: $("nextBtn"), pageInfo: $("pageInfo"),
     statsLoading: $("statsLoading"), statsEmpty: $("statsEmpty"), statsError: $("statsError"),
     statsRetry: $("statsRetry"), statsList: $("statsList"),
-    demoIncidentBtn: $("demoIncidentBtn"), demoResetBtn: $("demoResetBtn"),
     streakStrip: $("streakStrip"), streakChips: $("streakChips"),
     traceOverlay: $("traceOverlay"), traceIdBtn: $("traceIdBtn"), traceCopyLink: $("traceCopyLink"),
     traceClose: $("traceClose"), traceMeta: $("traceMeta"), traceLoading: $("traceLoading"),
@@ -399,43 +398,11 @@
     applyFilters();
   });
 
-  /* ---------------- demo scenarios ---------------- */
+  /* ---------------- shared refresh ---------------- */
   function refreshAll() {
     state.page = 1;
     loadHealth(); loadStats(); loadTimeline(); loadStreaks(); loadLogs();
   }
-
-  els.demoIncidentBtn.addEventListener("click", async () => {
-    els.demoIncidentBtn.disabled = true;
-    els.demoIncidentBtn.textContent = "Seeding…";
-    try {
-      const report = await window.Api.demoScenario("incident");
-      els.demoIncidentBtn.textContent = `⚡ Incident live (${report.inserted})`;
-      refreshAll();
-      if (report.hero_request_id) {
-        els.requestId.value = "";
-        openTrace(report.hero_request_id);
-      }
-    } catch (_) {
-      els.demoIncidentBtn.textContent = "⚡ Failed — retry";
-    } finally {
-      setTimeout(() => { els.demoIncidentBtn.textContent = "⚡ Simulate incident"; }, 2500);
-      els.demoIncidentBtn.disabled = false;
-    }
-  });
-
-  els.demoResetBtn.addEventListener("click", async () => {
-    els.demoResetBtn.disabled = true;
-    els.demoResetBtn.textContent = "Resetting…";
-    try {
-      await window.Api.demoReset();
-      if (state.traceId) closeTrace();
-      refreshAll();
-    } finally {
-      els.demoResetBtn.disabled = false;
-      els.demoResetBtn.textContent = "↺ Reset";
-    }
-  });
 
   /* ---------------- request trace drawer ---------------- */
   function showTrace(...visible) {

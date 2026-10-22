@@ -2,7 +2,7 @@
 
 > **One-liner:** Upload a JSONL log file → it gets parsed and stored → filter by severity → search by request ID → see which errors recur most often. One flow, done well and tested — the entire MVP.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-73_passed-brightgreen) ![CI](https://github.com/kigbanib/20-log-search-and-analyzer/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-68_passed-brightgreen) ![CI](https://github.com/kigbanib/20-log-search-and-analyzer/actions/workflows/ci.yml/badge.svg)
 
 **Live demo (local):** `http://localhost:8000` → dashboard at `/` + Swagger at `/docs` + explorer at `/explorer`  
 **Repo:** `kigbanib/20-log-search-and-analyzer` — integrated on `arena/d8852790…` (ready to PR to `develop`)
@@ -94,14 +94,14 @@ cp .env.example .env   # edit if needed
 # MAX_UPLOAD_MB=5
 # CORS_ORIGIN=*
 # PORT=8000
-# SEED_ON_START=1     ← optional but recommended: seeds 500 demo entries when DB is empty
+# SEED_ON_START=1     ← OPTIONAL demo seeding (500 entries when DB is empty). Leave UNSET for a blank site.
 ```
 
 ### 3. Generate data & seed
-**Fastest path (skip everything else):** run the app with `SEED_ON_START=1` —
-it creates the tables *and* seeds `testdata/sample_valid.jsonl` (500 entries,
-5 severities, recurring errors) automatically on first start. The manual
-alternative:
+**Default:** the app starts **empty** — users upload their own log files.
+Optional pre-fill: set `SEED_ON_START=1` (creates tables *and* seeds
+`testdata/sample_valid.jsonl` — 500 entries, 5 severities, recurring errors —
+on first start). The fully manual alternative:
 ```bash
 python scripts/generate_logs.py            # -> testdata/sample_valid.jsonl (500 lines)
 python scripts/generate_logs.py --all      # -> testdata/empty.log, malformed_30pct.*, unknown_severities.log, fake_image.log, sample_5.log
@@ -110,17 +110,16 @@ python seed_demo_data.py                   # seeds logs.db with 16 demo entries
 
 ### 4. Run
 ```bash
-SEED_ON_START=1 uvicorn app.main:app --reload --port 8000
-# Windows PowerShell:  $env:SEED_ON_START=1; uvicorn app.main:app --reload --port 8000
-# Windows cmd:         set SEED_ON_START=1 && uvicorn app.main:app --reload --port 8000
-# → http://localhost:8000        (Sift dashboard — upload, filters, stats, streaks)
+uvicorn app.main:app --reload --port 8000
+# → http://localhost:8000        (Sift dashboard — starts EMPTY until a user uploads logs)
 # → http://localhost:8000/docs   (Swagger)
-# Buttons in the UI ("Simulate incident" / "Reset") work out of the box.
+# Optional pre-seeded demo: prefix with SEED_ON_START=1
+#   (Windows PowerShell: $env:SEED_ON_START=1; uvicorn app.main:app --reload --port 8000)
 ```
 
 ### 5. Test
 ```bash
-pytest -v                     # 58 backend tests (parser 12 + logs 17 + models 7 + integration 4 + upload 5 + analytics 8 + demo 5)
+pytest -v                     # 53 backend tests (parser 12 + logs 17 + models 7 + integration 4 + upload 5 + analytics 8)
 node frontend/tests/api.test.js  # 15 frontend mock tests (happy + failure paths) — Node only needed for this
 ```
 
@@ -218,13 +217,13 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 - No real-time tail — **Next:** polling/WebSocket for live logs
 - Frontend no build step — **Next:** Vite + proper bundling
 - `MAX_UPLOAD_MB` enforced in-process — **Next:** nginx limit + S3
-- Demo endpoints (`POST /api/demo/scenario/incident`, `/api/demo/reset`) are unauthenticated by design for the demo/competition (synthetic data only) — **Next:** remove or guard behind auth in production
+- Demo seeding is opt-in only (`SEED_ON_START`, unset in production) — no demo endpoints ship in the deployed build — **Next:** Postgres for persistence across restarts
 
 ---
 
 ## 📦 Deployment
 
-**Render (free):** `DATABASE_URL` (sqlite file or `postgres://`), `PORT` auto. Seed on start via `lifespan init_db` + optional `python seed_demo_data.py`.  
+**Render (free):** `DATABASE_URL` (sqlite file or `postgres://`), `PORT` auto. Starts blank; optional one-time pre-fill via `SEED_ON_START=1`.  
 **Vercel alt:** `frontend/` as static, proxy `/api` to Render.
 
 ---

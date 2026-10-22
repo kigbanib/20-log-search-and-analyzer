@@ -21,7 +21,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.config import CORS_ORIGIN
 from app.database import init_db
-from app.routers import analytics, demo, logs, upload
+from app.routers import analytics, logs, upload
 
 
 def _maybe_seed() -> None:
@@ -97,7 +97,6 @@ app.add_middleware(
 app.include_router(upload.router)      # POST /api/logs/upload
 app.include_router(logs.router)        # GET /api/logs
 app.include_router(analytics.router)   # GET /api/stats/* + GET /api/health
-app.include_router(demo.router)        # POST /api/demo/scenario/* + /api/demo/reset
 
 
 # ---- Static assets (legacy `static/` from Role 2 + modern `frontend/` from Role 4) ----

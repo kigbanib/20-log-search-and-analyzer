@@ -51,13 +51,9 @@
             <h2>Activity</h2>
             <p class="hint">Entries per severity over time — incident spikes become visible.</p>
           </div>
-          <div class="card-head-actions">
-            <button id="demoIncidentBtn" class="btn btn-fire btn-sm" type="button" title="Inject a scripted multi-service incident">⚡ Simulate incident</button>
-            <button id="demoResetBtn" class="btn btn-ghost btn-sm" type="button" title="Wipe and reseed the baseline demo data">↺ Reset</button>
-            <div class="seg" role="group" aria-label="Bucket size">
-              <button id="bucketHour" class="seg-btn active" type="button">Hour</button>
-              <button id="bucketDay" class="seg-btn" type="button">Day</button>
-            </div>
+          <div class="seg" role="group" aria-label="Bucket size">
+            <button id="bucketHour" class="seg-btn active" type="button">Hour</button>
+            <button id="bucketDay" class="seg-btn" type="button">Day</button>
           </div>
         </div>
         <div id="chartLoading" class="chart-skeleton" aria-hidden="true"></div>
@@ -128,7 +124,6 @@
 
             <div class="chips-row" aria-label="Example queries">
               <span class="chips-label">Try:</span>
-              <button class="chip-try" data-request-id="req-8f3k2">req-8f3k2</button>
               <button class="chip-try" data-severity="CRITICAL">only CRITICAL</button>
               <button class="chip-try" data-severity="ERROR">only ERROR</button>
               <button class="chip-try" data-last24="1">last 24h</button>
@@ -206,5 +201,6 @@
     <script src="js/mock.js"></script>
     <script src="js/api.js"></script>
     <script src="js/app.js"></script>
-  </body>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4e9da3acbb89713',t:'MTc5MjY4NjI2OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
