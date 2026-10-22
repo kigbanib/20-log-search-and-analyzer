@@ -2,7 +2,7 @@
 
 > **One-liner:** Upload a JSONL log file → it gets parsed and stored → filter by severity → search by request ID → see which errors recur most often. One flow, done well and tested — the entire MVP.
 
-![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-68_passed-brightgreen) ![CI](https://github.com/kigbanib/20-log-search-and-analyzer/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green) ![SQLite](https://img.shields.io/badge/SQLite-SQLAlchemy_2.0-lightgrey) ![Tests](https://img.shields.io/badge/tests-75_passed-brightgreen) ![CI](https://github.com/kigbanib/20-log-search-and-analyzer/actions/workflows/ci.yml/badge.svg)
 
 **Live demo (local):** `http://localhost:8000` → dashboard at `/` + Swagger at `/docs` + explorer at `/explorer`  
 **Repo:** `kigbanib/20-log-search-and-analyzer` — integrated on `arena/d8852790…` (ready to PR to `develop`)
@@ -119,7 +119,7 @@ uvicorn app.main:app --reload --port 8000
 
 ### 5. Test
 ```bash
-pytest -v                     # 53 backend tests (parser 12 + logs 17 + models 7 + integration 4 + upload 5 + analytics 8)
+pytest -v                     # 60 backend tests (parser 12 + logs 17 + models 7 + integration 4 + upload 5 + analytics 8 + session isolation 7)
 node frontend/tests/api.test.js  # 15 frontend mock tests (happy + failure paths) — Node only needed for this
 ```
 
@@ -213,11 +213,11 @@ See `MERGE_REPORT.md` for merge details + missing-file attribution.
 
 ## ⚠️ Known Limitations & Next Improvements
 - SQLite + free Render tier → no horizontal scaling, sleeps (cold start ~30s) → **Next:** Postgres on Neon/Supabase + paid tier
-- No auth/auditing — **Next:** API key + upload audit log
+- Anonymous session isolation (random `X-Session-Id` per browser, localStorage) — strangers sharing the deployment can't see each other's logs, but it's a privacy wall, not login; clearing site data = fresh identity — **Next:** real auth + per-user retention
 - No real-time tail — **Next:** polling/WebSocket for live logs
 - Frontend no build step — **Next:** Vite + proper bundling
 - `MAX_UPLOAD_MB` enforced in-process — **Next:** nginx limit + S3
-- Demo seeding is opt-in only (`SEED_ON_START`, unset in production) — no demo endpoints ship in the deployed build — **Next:** Postgres for persistence across restarts
+- Demo seeding is opt-in only (`SEED_ON_START`, unset in production; seeded rows land in the shared anonymous bucket every visitor can see) — no demo endpoints ship in the deployed build — **Next:** Postgres for persistence across restarts
 
 ---
 

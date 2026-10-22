@@ -17,6 +17,7 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.database import get_db
+from app.deps import get_owner, visible_entries, visible_uploads
 from app.models import LogEntry, Upload
 
 router = APIRouter(prefix="/api", tags=["Analytics & Monitoring"])
@@ -44,11 +45,17 @@ def _iso(value: Optional[datetime]):
 
 
 @router.get("/stats/errors", summary="Top recurring ERROR/CRITICAL patterns")
-def recurring_errors(top: int = Query(10, ge=1, le=100), db: Session = Depends(get_db)):
-    """Return the most common ERROR/CRITICAL patterns and example request IDs."""
+def recurring_errors(
+    top: int = Query(10, ge=1, le=100),
+    db: Session = Depends(get_db),
+    owner: str = Depends(get_owner),
+):
+    """Return the most common ERROR/CRITICAL patterns and example request IDs.
+    Session-scoped: only the caller's rows + the shared anonymous bucket."""
     rows = (
         db.query(LogEntry)
         .filter(func.upper(LogEntry.severity).in_(["ERROR", "CRITICAL"]))
+        .filter(visible_entries(owner))
         .order_by(LogEntry.timestamp.asc(), LogEntry.id.asc())
         .all()
     )
@@ -87,15 +94,17 @@ def recurring_errors(top: int = Query(10, ge=1, le=100), db: Session = Depends(g
 
 
 @router.get("/stats/summary", summary="Totals per severity and service")
-def stats_summary(db: Session = Depends(get_db)):
-    """Return entry totals grouped by severity and service."""
+def stats_summary(db: Session = Depends(get_db), owner: str = Depends(get_owner)):
+    """Return entry totals grouped by severity and service (session-scoped)."""
     severity_rows = (
         db.query(LogEntry.severity, func.count(LogEntry.id))
+        .filter(visible_entries(owner))
         .group_by(LogEntry.severity)
         .all()
     )
     service_rows = (
         db.query(LogEntry.service, func.count(LogEntry.id))
+        .filter(visible_entries(owner))
         .group_by(LogEntry.service)
         .order_by(func.count(LogEntry.id).desc())
         .all()
@@ -121,16 +130,22 @@ _TIMELINE_BUCKETS = {
 def stats_timeline(
     bucket: str = Query("hour", pattern="^(hour|day)$"),
     db: Session = Depends(get_db),
+    owner: str = Depends(get_owner),
 ):
     """Counts per severity grouped into time buckets, zero-filled.
 
     Designed for the dashboard activity chart: every bucket contains all five
     severity keys (0 when absent) so the frontend can stack bars directly.
     Grouping happens in SQL (strftime), not in Python memory.
+    Session-scoped: only the caller's rows + the shared anonymous bucket.
     """
     fmt, max_buckets = _TIMELINE_BUCKETS[bucket]
 
-    bounds = db.query(func.min(LogEntry.timestamp), func.max(LogEntry.timestamp)).one()
+    bounds = (
+        db.query(func.min(LogEntry.timestamp), func.max(LogEntry.timestamp))
+        .filter(visible_entries(owner))
+        .one()
+    )
     if not bounds[0] or not bounds[1]:
         return {"bucket": bucket, "buckets": []}
 
@@ -140,6 +155,7 @@ def stats_timeline(
             LogEntry.severity,
             func.count(LogEntry.id),
         )
+        .filter(visible_entries(owner))
         .group_by("b", LogEntry.severity)
         .all()
     )
@@ -179,6 +195,7 @@ BAD_SEVERITIES = {"ERROR", "CRITICAL"}
 def error_streaks(
     min_streak: int = Query(3, ge=2, le=50, alias="min"),
     db: Session = Depends(get_db),
+    owner: str = Depends(get_owner),
 ):
     """Detect services whose most recent entries are ALL errors.
 
@@ -198,6 +215,7 @@ def error_streaks(
             LogEntry.message,
             LogEntry.request_id,
         )
+        .filter(visible_entries(owner))
         .order_by(LogEntry.service, LogEntry.timestamp.desc(), LogEntry.id.desc())
         .all()
     )
@@ -243,14 +261,25 @@ def error_streaks(
 
 
 @router.get("/health", summary="Service health check")
-def health(db: Session = Depends(get_db)):
+def health(db: Session = Depends(get_db), owner: str = Depends(get_owner)):
     """Lightweight readiness check: app responds and database can be queried.
-    
+
     Returns superset of teamguide + Role 2 expectations so both test suites pass.
+    `total_entries` / `last_upload` are session-scoped so the dashboard pill
+    shows each visitor THEIR count, never everyone else's uploads.
     """
     try:
-        total = db.query(func.count(LogEntry.id)).scalar() or 0
-        last_upload = db.query(func.max(Upload.uploaded_at)).scalar()
+        total = (
+            db.query(func.count(LogEntry.id))
+            .filter(visible_entries(owner))
+            .scalar()
+            or 0
+        )
+        last_upload = (
+            db.query(func.max(Upload.uploaded_at))
+            .filter(visible_uploads(owner))
+            .scalar()
+        )
         return {
             "status": "ok",
             "db": "ok",

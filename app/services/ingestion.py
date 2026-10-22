@@ -16,7 +16,7 @@ from app.crud import bulk_create_log_entries, create_upload
 from app.parser.parser import parse_lines
 
 
-def process_upload(file_bytes: bytes, filename: str, db: Session) -> dict[str, Any]:
+def process_upload(file_bytes: bytes, filename: str, db: Session, owner: str = "") -> dict[str, Any]:
     """Parse uploaded bytes, persist valid logs, return the API response dict.
 
     Returns exactly the contract from teamguide §6:
@@ -69,6 +69,7 @@ def process_upload(file_bytes: bytes, filename: str, db: Session) -> dict[str, A
         parsed_lines=parsed_count,
         failed_lines=failed,
         status=status,
+        owner=owner,
     )
 
     if parsed:
@@ -83,7 +84,7 @@ def process_upload(file_bytes: bytes, filename: str, db: Session) -> dict[str, A
             }
             for log in parsed
         ]
-        bulk_create_log_entries(db, upload.id, entries_data)
+        bulk_create_log_entries(db, upload.id, entries_data, owner=owner)
 
     # 6. Build response matching brief's contract
     return {

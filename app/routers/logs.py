@@ -15,6 +15,7 @@ from app.config import (
     VALID_SEVERITIES,
 )
 from app.database import get_db
+from app.deps import get_owner
 from app.crud import get_logs
 from app.schemas import PaginatedLogsResponse, ErrorResponse
 
@@ -70,9 +71,11 @@ def list_logs(
         description=f"Page size limit. Must be between 1 and {MAX_PAGE_SIZE}.",
     ),
     db: Session = Depends(get_db),
+    owner: str = Depends(get_owner),
 ):
     """
     Search and filter logs with validated parameters and pagination.
+    Session-scoped: only the caller's rows + the shared anonymous bucket.
     """
     # 1. Validate severity against agreed allowed values
     if severity is not None and severity.strip():
@@ -93,7 +96,7 @@ def list_logs(
                 detail="The 'from' parameter must be earlier than or equal to the 'to' parameter.",
             )
 
-    # 3. Fetch matching logs and total count from database
+    # 3. Fetch matching logs and total count from database (session-scoped)
     total, entries = get_logs(
         db=db,
         severity=severity,
@@ -102,6 +105,7 @@ def list_logs(
         to_time=to_time,
         page=page,
         limit=limit,
+        owner=owner,
     )
 
     # 4. Return paginated response complying with team contract

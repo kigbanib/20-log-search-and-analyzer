@@ -19,6 +19,7 @@ def get_logs(
     to_time: Optional[datetime] = None,
     page: int = 1,
     limit: int = 50,
+    owner: str = "",
 ) -> Tuple[int, List[LogEntry]]:
     """
     Query log entries with filtering, exact count, predictable sorting, and pagination.
@@ -28,11 +29,13 @@ def get_logs(
     - request_id: Exact matching (partial matching strictly disallowed).
     - from_time: LogEntry.timestamp >= from_time
     - to_time: LogEntry.timestamp <= to_time
+    - owner: session isolation — only rows the caller owns plus the shared
+      anonymous bucket ("") are ever returned.
 
     Returns:
     - Tuple of (total_matching_count, list_of_log_entries)
     """
-    filters = []
+    filters = [LogEntry.owner.in_((owner, ""))]  # session scope — always on
 
     # 1. Severity filter (case-insensitive)
     if severity is not None and severity.strip():
@@ -88,10 +91,12 @@ def create_upload(
     parsed_lines: int = 0,
     failed_lines: int = 0,
     status: str = "pending",
+    owner: str = "",
 ) -> Upload:
-    """Helper for Role 1 to record a log file upload."""
+    """Helper for Role 1 to record a log file upload (session-scoped via owner)."""
     upload = Upload(
         filename=filename,
+        owner=owner,
         total_lines=total_lines,
         parsed_lines=parsed_lines,
         failed_lines=failed_lines,
@@ -107,6 +112,7 @@ def bulk_create_log_entries(
     db: Session,
     upload_id: int,
     entries_data: List[Dict[str, Any]],
+    owner: str = "",
 ) -> int:
     """
     Helper for Role 1 to bulk-insert parsed log entries.
@@ -116,6 +122,7 @@ def bulk_create_log_entries(
       - service (str)
       - request_id (Optional[str])
       - message (str)
+    `owner` tags every row with the uploading session id ("" = shared).
     """
     entries = [
         LogEntry(
@@ -123,6 +130,7 @@ def bulk_create_log_entries(
             timestamp=item["timestamp"],
             severity=item["severity"].upper(),  # normalize to uppercase upon ingestion
             service=item["service"],
+            owner=owner,
             request_id=item.get("request_id"),
             message=item["message"],
         )

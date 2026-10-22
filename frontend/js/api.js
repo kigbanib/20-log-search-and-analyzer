@@ -21,9 +21,30 @@
   const delay = (ms) => new Promise((r) => setTimeout(r, ms));
   const clone = (o) => JSON.parse(JSON.stringify(o));
 
+  /* ---------------- anonymous session identity ----------------
+   * The deployed site serves many strangers from ONE database. Each browser
+   * gets ONE random id (persisted in localStorage); the backend tags this
+   * session's uploads with it and only ever returns rows this session owns
+   * plus the shared anonymous bucket. Deleting site data resets identity.
+   * This is privacy between visitors, not login. */
+  const SESSION_KEY = "sift_session_id";
+  let _sid = null;
+  function sessionId() {
+    if (_sid) return _sid;
+    try { _sid = window.localStorage.getItem(SESSION_KEY); } catch (_) { /* blocked storage → memory-only id */ }
+    if (!_sid) {
+      _sid = (typeof crypto !== "undefined" && crypto.randomUUID)
+        ? crypto.randomUUID()
+        : "s-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+      try { window.localStorage.setItem(SESSION_KEY, _sid); } catch (_) { /* non-fatal */ }
+    }
+    return _sid;
+  }
+
   /* ---------------- real-mode transport ---------------- */
   async function http(path, options = {}) {
-    const res = await fetch(API_BASE + path, options);
+    const headers = Object.assign({ "X-Session-Id": sessionId() }, options.headers || {});
+    const res = await fetch(API_BASE + path, Object.assign({}, options, { headers }));
     let data = {};
     try {
       data = await res.json();

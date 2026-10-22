@@ -65,10 +65,39 @@ def _maybe_seed() -> None:
         print(f"[sift] seed skipped: {exc}")
 
 
+def _migrate_owner_columns() -> None:
+    """SQLite-only: bring pre-isolation databases up to the session schema.
+
+    `create_all()` only creates MISSING tables — it never alters existing ones,
+    so a logs.db created before the `owner` column existed would crash every
+    query. New deploys get the fresh schema from models.py; this in-place
+    ALTER covers teammate laptops / long-lived local files. Failure never
+    blocks startup.
+    """
+    from sqlalchemy import text
+
+    from app.database import engine
+
+    if engine.dialect.name != "sqlite":
+        return  # managed migrations live elsewhere
+    try:
+        with engine.begin() as conn:
+            for table in ("log_entries", "uploads"):
+                cols = [row[1] for row in conn.execute(text(f"PRAGMA table_info({table})"))]
+                if cols and "owner" not in cols:
+                    conn.execute(
+                        text(f"ALTER TABLE {table} ADD COLUMN owner VARCHAR(64) NOT NULL DEFAULT ''")
+                    )
+                    print(f"[sift] migrated {table}: added owner column")
+    except Exception as exc:  # noqa: BLE001 — startup must never crash on migration
+        print(f"[sift] owner-column migration skipped: {exc}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Ensure DB tables exist on startup; optionally seed demo data."""
     init_db()
+    _migrate_owner_columns()
     _maybe_seed()
     yield
 

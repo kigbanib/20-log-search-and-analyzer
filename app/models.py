@@ -34,6 +34,7 @@ class Upload(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     filename = Column(String(255), nullable=False)
     uploaded_at = Column(DateTime(timezone=True), nullable=False, default=utc_now)
+    owner = Column(String(64), nullable=False, default="", index=True)  # session id ("" = shared/anonymous)
     total_lines = Column(Integer, nullable=False, default=0)
     parsed_lines = Column(Integer, nullable=False, default=0)
     failed_lines = Column(Integer, nullable=False, default=0)
@@ -71,6 +72,7 @@ class LogEntry(Base):
     timestamp = Column(DateTime(timezone=True), nullable=False, index=True)
     severity = Column(String(20), nullable=False, index=True)
     service = Column(String(100), nullable=False)
+    owner = Column(String(64), nullable=False, default="", index=True)  # session id ("" = shared/anonymous)
     request_id = Column(String(100), nullable=True, index=True)
     message = Column(Text, nullable=False)
 
@@ -87,6 +89,7 @@ class LogEntry(Base):
         Index("idx_log_entries_severity", "severity"),
         Index("idx_log_entries_request_id", "request_id"),
         Index("idx_log_entries_ts_severity", "timestamp", "severity"),
+        Index("idx_log_entries_owner_service", "owner", "service"),  # session-scoped streak/analytics scans
     )
 
     def __repr__(self) -> str:

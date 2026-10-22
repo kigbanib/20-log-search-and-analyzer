@@ -12,6 +12,7 @@ from sqlalchemy.orm import Session
 
 from app.config import MAX_UPLOAD_BYTES, MAX_UPLOAD_MB
 from app.database import get_db
+from app.deps import get_owner
 from app.services.ingestion import process_upload
 
 router = APIRouter(prefix="/api/logs", tags=["Ingestion"])
@@ -20,6 +21,7 @@ router = APIRouter(prefix="/api/logs", tags=["Ingestion"])
 @router.post("/upload", summary="Upload a JSONL log file")
 async def upload_log_file(
     file: UploadFile = File(..., description="Log file (.log, .jsonl, .txt)"),
+    owner: str = Depends(get_owner),
     db: Session = Depends(get_db),
 ):
     # 1. Validate file extension (case-insensitive)
@@ -41,5 +43,6 @@ async def upload_log_file(
     if not file_bytes or not file_bytes.strip():
         raise HTTPException(status_code=400, detail="File is empty.")
 
-    # 3. Process (parse + store + build response)
-    return process_upload(file_bytes, filename, db)
+    # 3. Process (parse + store + build response) — rows tagged with the
+    #    uploader's session id so other visitors never see them.
+    return process_upload(file_bytes, filename, db, owner=owner)
